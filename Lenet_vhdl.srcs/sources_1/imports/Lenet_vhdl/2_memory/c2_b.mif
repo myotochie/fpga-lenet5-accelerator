@@ -1,0 +1,13 @@
+-- Memory Initialization File for LENET_C2_B
+WIDTH=32;
+DEPTH=6;
+ADDRESS_RADIX=UNS;
+DATA_RADIX=DEC;
+CONTENT BEGIN
+    0 : 1304;
+    1 : -294;
+    2 : 875;
+    3 : -1200;
+    4 : -615;
+    5 : -1612;
+END;
