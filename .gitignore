@@ -1,0 +1,26 @@
+# --- Python ---
+# L'environnement virtuel (indispensable d'ignorer ceci !)
+venv/
+env/
+ENV/
+
+# Cache d'exécution Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Données et fichiers générés ---
+# On ignore les dossiers de données massives
+data/
+coe_files/
+coe_files_modif/
+mem_files/
+mif_files/
+
+# --- Divers ---
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs d'erreurs
+*.log
