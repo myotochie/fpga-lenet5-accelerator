@@ -1,0 +1,33 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "1",
+    "file": "lenet_conv1_only.cpp",
+    "fileloc": 156,
+    "instructions": 49,
+    "loads": {
+      "L": 4
+    },
+    "name": "top_A",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 431
+  },
+  "1": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "lenet_conv1_only.cpp",
+    "fileloc": 112,
+    "instructions": 382,
+    "loads": {
+      "G": 26,
+      "L": 30
+    },
+    "name": "conv1_pragma",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 382
+  }
+}

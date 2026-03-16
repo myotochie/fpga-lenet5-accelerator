@@ -1,0 +1,12 @@
+# --- Vitis HLS ---
+# On ignore les dossiers de projet générés
+Lenet_36/
+
+# On ignore les fichiers temporaires et logs
+*.log
+*.jou
+.Xil/
+
+# Si tu veux garder tes rapports (optionnel mais conseillé)
+# On peut forcer Git à ne PAS ignorer les fichiers .xml ou .rpt importants
+# !**/syn/report/*.rpt

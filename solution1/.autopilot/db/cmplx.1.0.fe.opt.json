@@ -1,0 +1,51 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "3 2",
+    "file": "lenet_conv1_only.cpp",
+    "fileloc": 156,
+    "instructions": 11,
+    "name": "top_A",
+    "total_instructions": 227
+  },
+  "1": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "lenet_conv1_only.cpp",
+    "fileloc": 83,
+    "instructions": 13,
+    "name": "requant_u8_q15",
+    "total_instructions": 13
+  },
+  "2": {
+    "basicblocks": 28,
+    "calls": "",
+    "file": "lenet_conv1_only.cpp",
+    "fileloc": 137,
+    "instructions": 122,
+    "loads": {
+      "L": 8
+    },
+    "name": "maxpool1_pragma",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 122
+  },
+  "3": {
+    "basicblocks": 31,
+    "calls": "1",
+    "file": "lenet_conv1_only.cpp",
+    "fileloc": 112,
+    "instructions": 81,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "name": "conv1_pragma",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 94
+  }
+}

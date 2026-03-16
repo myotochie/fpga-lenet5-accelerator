@@ -1,0 +1,58 @@
+{
+    "1": {
+        "name": "conv1_pragma_Pipeline_VITIS_LOOP_118_2_VITIS_LOOP_119_3",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "503",
+        "total_instructions": "503",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "33"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "top_A",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "99",
+        "total_instructions": "677",
+        "calls": "2",
+        "basicblocks": "4",
+        "loads": {
+            "L": "9"
+        },
+        "stores": {
+            "L": "10",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "conv1_pragma",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "75",
+        "total_instructions": "578",
+        "calls": "1",
+        "basicblocks": "4",
+        "loads": {
+            "G": "25",
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

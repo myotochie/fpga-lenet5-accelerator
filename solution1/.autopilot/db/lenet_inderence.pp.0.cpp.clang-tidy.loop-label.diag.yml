@@ -1,0 +1,309 @@
+---
+MainSourceFile:  'C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/solution1/.autopilot/db/lenet_inderence.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          62887
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          290211
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          290675
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          291140
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          573817
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_77_1:  '
+    FileOffset:      77
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          951821
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_77_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_78_2:  '
+    FileOffset:      78
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          951867
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_78_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_79_3:  '
+    FileOffset:      79
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          951915
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_79_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_87_4:  '
+    FileOffset:      87
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          952030
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_87_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_89_5:  '
+    FileOffset:      89
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          952095
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_89_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_127_1:  '
+    FileOffset:      127
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          952750
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_127_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_128_2:  '
+    FileOffset:      128
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          952793
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_128_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_129_3:  '
+    FileOffset:      129
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          952841
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_129_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_152_1:  '
+    FileOffset:      152
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          953477
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_152_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_153_2:  '
+    FileOffset:      153
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          953523
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_153_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_154_3:  '
+    FileOffset:      154
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          953571
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_154_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_161_4:  '
+    FileOffset:      161
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          953685
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_161_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_163_5:  '
+    FileOffset:      163
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          953751
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_163_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_165_6:  '
+    FileOffset:      165
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          953816
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_165_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_189_1:  '
+    FileOffset:      189
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          954463
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_189_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_190_2:  '
+    FileOffset:      190
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          954506
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_190_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_191_3:  '
+    FileOffset:      191
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          954554
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_191_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_211_1:  '
+    FileOffset:      211
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          955137
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_212_2:  '
+    FileOffset:      212
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          955178
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_212_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_213_3:  '
+    FileOffset:      213
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          955221
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_213_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_225_1:  '
+    FileOffset:      225
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          955457
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_225_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_232_2:  '
+    FileOffset:      232
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          955560
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_232_2: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      259
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      267
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      268
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      269
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      270
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      271
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      274
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_277_1:  '
+    FileOffset:      277
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          956968
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_277_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_278_2:  '
+    FileOffset:      278
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          957007
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_278_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_292_3:  '
+    FileOffset:      292
+    FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\solution1\.autopilot\db\lenet_inderence.pp.0.cpp'
+        Offset:          957293
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_292_3: '
+...
