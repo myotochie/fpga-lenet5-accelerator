@@ -19,6 +19,7 @@
         "m01_couplers": {}
       },
       "axi_bram_ctrl_0": "",
+      "axi_bram_ctrl_0_bram": "",
       "lenet_axi_wrapper_0": ""
     },
     "interface_ports": {
@@ -2310,6 +2311,17 @@
         "xci_path": "ip\\design_rtl_axi_bram_ctrl_0_0\\design_rtl_axi_bram_ctrl_0_0.xci",
         "inst_hier_path": "axi_bram_ctrl_0"
       },
+      "axi_bram_ctrl_0_bram": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_rtl_axi_bram_ctrl_0_bram_0",
+        "xci_path": "ip\\design_rtl_axi_bram_ctrl_0_bram_0\\design_rtl_axi_bram_ctrl_0_bram_0.xci",
+        "inst_hier_path": "axi_bram_ctrl_0_bram",
+        "parameters": {
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          }
+        }
+      },
       "lenet_axi_wrapper_0": {
         "vlnv": "xilinx.com:module_ref:lenet_axi_wrapper:1.0",
         "xci_name": "design_rtl_lenet_axi_wrapper_0_0",
@@ -2557,6 +2569,30 @@
       }
     },
     "interface_nets": {
+      "axi_bram_ctrl_0_BRAM_PORTA": {
+        "interface_ports": [
+          "axi_bram_ctrl_0_bram/BRAM_PORTA",
+          "axi_bram_ctrl_0/BRAM_PORTA"
+        ]
+      },
+      "axi_bram_ctrl_0_BRAM_PORTB": {
+        "interface_ports": [
+          "axi_bram_ctrl_0_bram/BRAM_PORTB",
+          "axi_bram_ctrl_0/BRAM_PORTB"
+        ]
+      },
+      "axi_interconnect_0_M00_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M00_AXI",
+          "axi_bram_ctrl_0/S_AXI"
+        ]
+      },
+      "axi_interconnect_0_M01_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M01_AXI",
+          "lenet_axi_wrapper_0/s_axi"
+        ]
+      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
@@ -2568,13 +2604,37 @@
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
         ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "axi_interconnect_0/S00_AXI"
+        ]
       }
     },
     "nets": {
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "axi_interconnect_0/S00_ARESETN",
+          "axi_bram_ctrl_0/s_axi_aresetn",
+          "axi_interconnect_0/M00_ARESETN",
+          "axi_interconnect_0/ARESETN",
+          "lenet_axi_wrapper_0/s_axi_aresetn",
+          "axi_interconnect_0/M01_ARESETN"
+        ]
+      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "proc_sys_reset_0/slowest_sync_clk"
+          "proc_sys_reset_0/slowest_sync_clk",
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "axi_interconnect_0/S00_ACLK",
+          "axi_bram_ctrl_0/s_axi_aclk",
+          "axi_interconnect_0/M00_ACLK",
+          "axi_interconnect_0/ACLK",
+          "lenet_axi_wrapper_0/s_axi_aclk",
+          "axi_interconnect_0/M01_ACLK"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2582,6 +2642,26 @@
           "processing_system7_0/FCLK_RESET0_N",
           "proc_sys_reset_0/ext_reset_in"
         ]
+      }
+    },
+    "addressing": {
+      "/processing_system7_0": {
+        "address_spaces": {
+          "Data": {
+            "segments": {
+              "SEG_axi_bram_ctrl_0_Mem0": {
+                "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
+                "offset": "0x40000000",
+                "range": "8K"
+              },
+              "SEG_lenet_axi_wrapper_0_reg0": {
+                "address_block": "/lenet_axi_wrapper_0/s_axi/reg0",
+                "offset": "0x40002000",
+                "range": "4K"
+              }
+            }
+          }
+        }
       }
     }
   }

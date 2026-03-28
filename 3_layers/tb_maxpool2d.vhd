@@ -1,10 +1,25 @@
 ----------------------------------------------------------------------------------
--- tb_maxpool2d.vhd
--- ROM initialisée depuis output_conv1_streaming.txt (sortie Conv1 + ReLU)
--- Toutes les valeurs sont >= 0 après ReLU intégré dans Conv1.
---
--- La procédure read_signed_int est conservée par robustesse
--- (fonctionne sur valeurs positives ET négatives).
+--! @file       tb_maxpool2d.vhd
+--! @brief      Testbench for the maxpool2d module (2x2 Max Pooling Layer).
+--!
+--! @details    Validates the MaxPool2D module using as input the output of
+--!             Conv1 + ReLU layer, loaded from an external text file
+--!             (output_conv1_streaming.txt). Since ReLU is applied upstream,
+--!             all input values are guaranteed to be in [0, 127].
+--!
+--!             The testbench:
+--!               - Loads input data into a ROM from a text file at elaboration time.
+--!               - Drives the DUT with a start pulse and waits for done.
+--!               - Captures output values written by the DUT into an output memory.
+--!               - Performs a sanity check (no negative values after ReLU).
+--!               - Verifies the 2x2 pooling window for the first pixel, per channel.
+--!               - Saves results to output_pool1_14x14x3.txt (interleaved format).
+--!
+--! @note       Input format  : interleaved HWC - 28x28x3 = 2352 int8 values.
+--! @note       Output format : interleaved HWC - 14x14x3 = 588  int8 values.
+--!
+--! @author     myotochie
+--! @date       2025
 ----------------------------------------------------------------------------------
 
 library ieee;
@@ -15,34 +30,45 @@ use std.textio.all;
 library work;
 use work.lenet_types_pkg.all;
 
+--! @brief Top-level testbench entity for maxpool2d.
+--! @details No ports - this is a self-contained simulation entity.
 entity tb_maxpool2d is
 end tb_maxpool2d;
 
+--! @brief Behavioral architecture of tb_maxpool2d.
 architecture Behavioral of tb_maxpool2d is
 
     ---------------------------------------------------------------------------
-    -- Paramètres
+    --! @name Simulation Parameters
+    --! @{
     ---------------------------------------------------------------------------
-    constant IN_WIDTH    : integer := 28;
-    constant IN_HEIGHT   : integer := 28;
-    constant IN_CHANNELS : integer := 3;
-    constant POOL_SIZE   : integer := 2;
-    constant OUT_WIDTH   : integer := 14;
-    constant OUT_HEIGHT  : integer := 14;
+    constant IN_WIDTH    : integer := 28;   --!< Input feature map width  (pixels)
+    constant IN_HEIGHT   : integer := 28;   --!< Input feature map height (pixels)
+    constant IN_CHANNELS : integer := 3;    --!< Number of input channels
+    constant POOL_SIZE   : integer := 2;    --!< Pooling window size (2x2)
+    constant OUT_WIDTH   : integer := 14;   --!< Output feature map width  (= IN_WIDTH  / POOL_SIZE)
+    constant OUT_HEIGHT  : integer := 14;   --!< Output feature map height (= IN_HEIGHT / POOL_SIZE)
 
-    constant IN_SIZE  : integer := IN_WIDTH  * IN_HEIGHT  * IN_CHANNELS;  -- 2352
-    constant OUT_SIZE : integer := OUT_WIDTH * OUT_HEIGHT * IN_CHANNELS;  -- 588
+    constant IN_SIZE  : integer := IN_WIDTH  * IN_HEIGHT  * IN_CHANNELS; --!< Total input  elements (2352)
+    constant OUT_SIZE : integer := OUT_WIDTH * OUT_HEIGHT * IN_CHANNELS; --!< Total output elements (588)
 
-    constant CLK_PERIOD : time := 10 ns;
+    constant CLK_PERIOD : time := 10 ns; --!< Clock period (100 MHz)
+    --! @}
 
     ---------------------------------------------------------------------------
-    -- Type ROM
+    --! @brief ROM type storing the Conv1+ReLU output as signed 8-bit integers.
     ---------------------------------------------------------------------------
     type rom_type is array (0 to IN_SIZE-1) of int8;
 
     ---------------------------------------------------------------------------
-    -- Procédure : parse un entier signé depuis une ligne textio
-    -- Conservée pour robustesse même si les valeurs sont >= 0 après ReLU
+    --! @brief Parse a signed integer from a textio line.
+    --!
+    --! @details Reads leading whitespace, an optional '-' sign, then decimal
+    --!          digits. Kept for robustness even though all values after ReLU
+    --!          are non-negative.
+    --!
+    --! @param[inout] l      The textio line being parsed (consumed in place).
+    --! @param[out]   result The parsed integer value.
     ---------------------------------------------------------------------------
     procedure read_signed_int(l      : inout line;
                                result : out   integer) is
@@ -51,6 +77,7 @@ architecture Behavioral of tb_maxpool2d is
         variable val    : integer := 0;
         variable good   : boolean;
     begin
+        -- Skip leading whitespace and parse optional sign or first digit
         loop
             exit when l = null or l'length = 0;
             read(l, c, good);
@@ -64,6 +91,7 @@ architecture Behavioral of tb_maxpool2d is
                 exit;
             end if;
         end loop;
+        -- Parse remaining digits
         loop
             exit when l = null or l'length = 0;
             read(l, c, good);
@@ -75,7 +103,14 @@ architecture Behavioral of tb_maxpool2d is
     end procedure;
 
     ---------------------------------------------------------------------------
-    -- Initialisation ROM depuis fichier
+    --! @brief Initialize the ROM from a plain-text file of signed integers.
+    --!
+    --! @details Each line of the file contains one integer value (one per
+    --!          element in HWC order). Values are clamped to the int8 range
+    --!          [-128, 127] before storage.
+    --!
+    --! @param[in] filename Path to the source text file.
+    --! @return            Initialized ROM array (rom_type).
     ---------------------------------------------------------------------------
     impure function init_rom_from_file(filename : string) return rom_type is
         file     f   : text;
@@ -88,6 +123,7 @@ architecture Behavioral of tb_maxpool2d is
             if not endfile(f) then
                 readline(f, l);
                 read_signed_int(l, val);
+                -- Clamp to int8 range to prevent overflow
                 if val >  127 then val :=  127; end if;
                 if val < -128 then val := -128; end if;
                 mem(i) := to_signed(val, 8);
@@ -98,39 +134,52 @@ architecture Behavioral of tb_maxpool2d is
     end function;
 
     ---------------------------------------------------------------------------
-    -- ROM Conv1 + ReLU
-    -- Source : output_conv1_streaming.txt
-    -- Toutes les valeurs sont dans [0, 127] grâce au ReLU intégré dans Conv1
+    --! @brief ROM holding Conv1+ReLU output data.
+    --!
+    --! @details Loaded at elaboration time from output_conv1_streaming.txt.
+    --!          All values are in [0, 127] because ReLU zeroes negative outputs.
     ---------------------------------------------------------------------------
     constant CONV1_ROM : rom_type :=
         init_rom_from_file("output_conv1_streaming.txt");
 
     ---------------------------------------------------------------------------
-    -- Signaux DUT
+    --! @name DUT Interface Signals
+    --! @{
     ---------------------------------------------------------------------------
-    signal clk   : std_logic := '0';
-    signal rst   : std_logic := '0';
-    signal start : std_logic := '0';
-    signal done  : std_logic;
+    signal clk   : std_logic := '0'; --!< System clock
+    signal rst   : std_logic := '0'; --!< Synchronous active-high reset
+    signal start : std_logic := '0'; --!< Single-cycle start pulse
+    signal done  : std_logic;        --!< Asserted by DUT when pooling is complete
 
-    signal in_addr  : std_logic_vector(11 downto 0);
-    signal in_data  : int8;
+    signal in_addr  : std_logic_vector(11 downto 0); --!< Read address into input ROM  (max 4096)
+    signal in_data  : int8;                           --!< Data returned by input ROM (1-cycle latency)
 
-    signal out_addr : std_logic_vector(11 downto 0);
-    signal out_data : int8;
-    signal out_we   : std_logic;
+    signal out_addr : std_logic_vector(11 downto 0); --!< Write address into output memory
+    signal out_data : int8;                           --!< Pooled output value from DUT
+    signal out_we   : std_logic;                      --!< Write-enable for output memory
+    --! @}
 
     ---------------------------------------------------------------------------
-    -- Mémoire de sortie
+    --! @name Output Capture Memory
+    --! @{
     ---------------------------------------------------------------------------
+    --! @brief Array type for capturing DUT outputs (588 int8 values).
     type out_mem_type is array (0 to OUT_SIZE-1) of int8;
-    signal output_memory : out_mem_type := (others => (others => '0'));
 
-    signal sim_done      : boolean := false;
-    signal cycle_counter : integer := 0;
+    --! @brief Output memory written whenever out_we is asserted.
+    signal output_memory : out_mem_type := (others => (others => '0'));
+    --! @}
 
     ---------------------------------------------------------------------------
-    -- Composant
+    --! @name Simulation Control
+    --! @{
+    ---------------------------------------------------------------------------
+    signal sim_done      : boolean := false; --!< Set to true to stop the clock process
+    signal cycle_counter : integer := 0;     --!< Free-running cycle counter (reset on rst)
+    --! @}
+
+    ---------------------------------------------------------------------------
+    --! @brief Component declaration for the Device Under Test.
     ---------------------------------------------------------------------------
     component maxpool2d
         generic (
@@ -155,7 +204,8 @@ architecture Behavioral of tb_maxpool2d is
 begin
 
     ---------------------------------------------------------------------------
-    -- DUT
+    --! @brief DUT instantiation.
+    --! @details Generic map sets all dimension and pooling parameters.
     ---------------------------------------------------------------------------
     DUT : maxpool2d
         generic map (
@@ -177,7 +227,10 @@ begin
         );
 
     ---------------------------------------------------------------------------
-    -- ROM Conv1+ReLU : BRAM synchrone 1 cycle latence
+    --! @brief Synchronous ROM process - models a 1-cycle-latency BRAM.
+    --!
+    --! @details On each rising clock edge, the ROM outputs the value at in_addr.
+    --!          Out-of-range addresses return 0x00 to prevent simulation errors.
     ---------------------------------------------------------------------------
     rom_proc : process(clk)
         variable addr_v : integer;
@@ -193,7 +246,10 @@ begin
     end process;
 
     ---------------------------------------------------------------------------
-    -- Capture sortie
+    --! @brief Output capture process.
+    --!
+    --! @details Writes DUT output data into output_memory whenever out_we
+    --!          is asserted. Out-of-range addresses are silently ignored.
     ---------------------------------------------------------------------------
     output_capture : process(clk)
         variable addr_v : integer;
@@ -209,7 +265,10 @@ begin
     end process;
 
     ---------------------------------------------------------------------------
-    -- Horloge
+    --! @brief Clock generation process.
+    --!
+    --! @details Generates a symmetric clock with period CLK_PERIOD.
+    --!          Stops automatically when sim_done is asserted.
     ---------------------------------------------------------------------------
     clk_process : process
     begin
@@ -221,7 +280,11 @@ begin
     end process;
 
     ---------------------------------------------------------------------------
-    -- Compteur de cycles
+    --! @brief Cycle counter process.
+    --!
+    --! @details Increments on every rising clock edge.
+    --!          Resets to 0 while rst is asserted.
+    --!          Used to measure DUT latency in clock cycles.
     ---------------------------------------------------------------------------
     cycle_cnt : process(clk)
     begin
@@ -235,16 +298,28 @@ begin
     end process;
 
     ---------------------------------------------------------------------------
-    -- Stimulus
+    --! @brief Main stimulus process.
+    --!
+    --! @details Sequence:
+    --!          1. Print testbench header and ROM sanity information.
+    --!          2. Assert reset for 5 cycles, then deassert.
+    --!          3. Issue a 1-cycle start pulse and record the start cycle.
+    --!          4. Poll done with a 50 000-cycle timeout.
+    --!          5. Display latency, output preview and window verification.
+    --!          6. Save all 588 output values to output_pool1_14x14x3.txt.
+    --!          7. Assert sim_done to terminate the clock process.
     ---------------------------------------------------------------------------
     stimulus : process
         variable line_v      : line;
         file f_out           : text;
-        variable v_start_cyc : integer := 0;
-        variable v_end_cyc   : integer := 0;
-        variable timeout_cnt : integer := 0;
-        variable neg_count   : integer := 0;
+        variable v_start_cyc : integer := 0; --!< Cycle number when start was issued
+        variable v_end_cyc   : integer := 0; --!< Cycle number when done was observed
+        variable timeout_cnt : integer := 0; --!< Watchdog counter
+        variable neg_count   : integer := 0; --!< Number of negative values in ROM (expect 0)
     begin
+        -- ---------------------------------------------------------------
+        -- Header
+        -- ---------------------------------------------------------------
         report "=====================================================" severity note;
         report "=== TESTBENCH MAXPOOL2D 2x2 (apres Conv1+ReLU) ===" severity note;
         report "  Source : output_conv1_streaming.txt (valeurs >= 0)" severity note;
@@ -255,7 +330,9 @@ begin
                integer'image(OUT_HEIGHT) & "x" & integer'image(IN_CHANNELS) &
                " = " & integer'image(OUT_SIZE) & " valeurs" severity note;
 
-        -- Vérification ROM : 6 premières valeurs (toutes >= 0 après ReLU)
+        -- ---------------------------------------------------------------
+        -- ROM spot-check: print first 6 values (all expected >= 0 after ReLU)
+        -- ---------------------------------------------------------------
         report "  Verification ROM[0..5] (attendu : valeurs >= 0) :" severity note;
         report "  ROM[0]=" & integer'image(to_integer(CONV1_ROM(0))) &
                " ROM[1]=" & integer'image(to_integer(CONV1_ROM(1))) &
@@ -264,7 +341,9 @@ begin
                " ROM[4]=" & integer'image(to_integer(CONV1_ROM(4))) &
                " ROM[5]=" & integer'image(to_integer(CONV1_ROM(5))) severity note;
 
-        -- Vérification sanity : compter les valeurs négatives (doit être 0)
+        -- ---------------------------------------------------------------
+        -- Sanity check: count negative values - must be 0 after ReLU
+        -- ---------------------------------------------------------------
         neg_count := 0;
         for i in 0 to IN_SIZE-1 loop
             if CONV1_ROM(i) < to_signed(0, 8) then
@@ -279,13 +358,18 @@ begin
         end if;
         report "=====================================================" severity note;
 
+        -- ---------------------------------------------------------------
+        -- Reset sequence
+        -- ---------------------------------------------------------------
         rst   <= '1';
         start <= '0';
         wait for CLK_PERIOD * 5;
         rst   <= '0';
         wait for CLK_PERIOD * 3;
 
-        -- Démarrage
+        -- ---------------------------------------------------------------
+        -- Start pulse (1 clock cycle)
+        -- ---------------------------------------------------------------
         wait until rising_edge(clk);
         v_start_cyc := cycle_counter;
         report "=== DEMARRAGE MaxPool ===" severity note;
@@ -294,7 +378,9 @@ begin
         wait until rising_edge(clk);
         start <= '0';
 
-        -- Attente done avec timeout
+        -- ---------------------------------------------------------------
+        -- Wait for done with watchdog timeout
+        -- ---------------------------------------------------------------
         timeout_cnt := 0;
         while done /= '1' and timeout_cnt < 50000 loop
             wait until rising_edge(clk);
@@ -314,8 +400,10 @@ begin
 
         wait for CLK_PERIOD * 5;
 
-        -- Aperçu résultats : 3 premiers pixels de sortie
-        -- Toutes valeurs >= 0 car max(valeurs >= 0) >= 0
+        -- ---------------------------------------------------------------
+        -- Output preview: first 3 output pixels (one per channel group)
+        -- All values expected >= 0 : max(values >= 0) >= 0
+        -- ---------------------------------------------------------------
         report "=== APERCU SORTIES (3 premiers pixels) ===" severity note;
         for pix in 0 to 2 loop
             report "  pool[" & integer'image(pix) & "] = [ch0=" &
@@ -325,31 +413,37 @@ begin
                    severity note;
         end loop;
 
-        -- Vérification fenêtre (0,0) par canal
-        -- Adresses : ch0 ? 0,3,84,87 | ch1 ? 1,4,85,88 | ch2 ? 2,5,86,89
-        -- max pooling 2x2 sur valeurs >= 0 ? résultat >= 0
+        -- ---------------------------------------------------------------
+        -- Window verification for pixel (0,0) - addresses per channel:
+        --   ch0: ROM[0], ROM[3], ROM[84], ROM[87]
+        --   ch1: ROM[1], ROM[4], ROM[85], ROM[88]
+        --   ch2: ROM[2], ROM[5], ROM[86], ROM[89]
+        -- Expected result = max of the four values in each channel.
+        -- ---------------------------------------------------------------
         report "=== VERIFICATION fenetre (0,0) ===" severity note;
         report "  Canal 0 : in=" &
                integer'image(to_integer(CONV1_ROM(0)))  & "," &
                integer'image(to_integer(CONV1_ROM(3)))  & "," &
                integer'image(to_integer(CONV1_ROM(84))) & "," &
                integer'image(to_integer(CONV1_ROM(87))) &
-               " ? pool=" & integer'image(to_integer(output_memory(0))) severity note;
+               " -> pool=" & integer'image(to_integer(output_memory(0))) severity note;
         report "  Canal 1 : in=" &
                integer'image(to_integer(CONV1_ROM(1)))  & "," &
                integer'image(to_integer(CONV1_ROM(4)))  & "," &
                integer'image(to_integer(CONV1_ROM(85))) & "," &
                integer'image(to_integer(CONV1_ROM(88))) &
-               " ? pool=" & integer'image(to_integer(output_memory(1))) severity note;
+               " -> pool=" & integer'image(to_integer(output_memory(1))) severity note;
         report "  Canal 2 : in=" &
                integer'image(to_integer(CONV1_ROM(2)))  & "," &
                integer'image(to_integer(CONV1_ROM(5)))  & "," &
                integer'image(to_integer(CONV1_ROM(86))) & "," &
                integer'image(to_integer(CONV1_ROM(89))) &
-               " ? pool=" & integer'image(to_integer(output_memory(2))) severity note;
+               " -> pool=" & integer'image(to_integer(output_memory(2))) severity note;
 
-        -- Sauvegarde output_pool1_14x14x3.txt
-        -- Format interleaved identique ? compatible avec la suite du réseau
+        -- ---------------------------------------------------------------
+        -- Save output to file (interleaved HWC format, one value per line)
+        -- Compatible with subsequent network layers.
+        -- ---------------------------------------------------------------
         file_open(f_out, "output_pool1_14x14x3.txt", write_mode);
         for i in 0 to OUT_SIZE-1 loop
             write(line_v, to_integer(output_memory(i)));
@@ -362,6 +456,9 @@ begin
         report "=== FIN TEST MAXPOOL2D ===" severity note;
         report "=====================================================" severity note;
 
+        -- ---------------------------------------------------------------
+        -- End simulation
+        -- ---------------------------------------------------------------
         sim_done <= true;
         wait;
     end process;
