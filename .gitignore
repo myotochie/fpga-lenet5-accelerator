@@ -1,3 +1,26 @@
+# --- Vitis IDE / SDK ---
+# Ignorer les dossiers de compilation (binaires)
+Debug/
+Release/
+
+# Ignorer les métadonnées de l'espace de travail
+.metadata/
+.analytics/
+.Xil/
+
+# Ignorer les fichiers de logs et journaux
+*.log
+*.jou
+*.str
+*.prj
+
+# Ignorer la plateforme générée (si tu veux que les autres la reconstruisent)
+# Souvent on ne garde que le fichier .xsa et les sources C/C++
+*_system/
+*_wrapper/
+
+# Ignorer les fichiers temporaires de l'indexeur
+.settings/
 # --- Vitis HLS ---
 # On ignore les dossiers de projet générés
 Lenet_36/
