@@ -1,26 +1,35 @@
-# --- Python ---
-# L'environnement virtuel (indispensable d'ignorer ceci !)
-venv/
-env/
-ENV/
+# --- Vitis IDE / SDK ---
+# Ignorer les dossiers de compilation (binaires)
+Debug/
+Release/
 
-# Cache d'exécution Python
-__pycache__/
-*.py[cod]
-*$py.class
+# Ignorer les métadonnées de l'espace de travail
+.metadata/
+.analytics/
+.Xil/
 
-# --- Données et fichiers générés ---
-# On ignore les dossiers de données massives
-data/
-coe_files/
-coe_files_modif/
-mem_files/
-mif_files/
-
-# --- Divers ---
-# Fichiers système
-.DS_Store
-Thumbs.db
-
-# Logs d'erreurs
+# Ignorer les fichiers de logs et journaux
 *.log
+*.jou
+*.str
+*.prj
+
+# Ignorer la plateforme générée (si tu veux que les autres la reconstruisent)
+# Souvent on ne garde que le fichier .xsa et les sources C/C++
+*_system/
+*_wrapper/
+
+# Ignorer les fichiers temporaires de l'indexeur
+.settings/
+# --- Vitis HLS ---
+# On ignore les dossiers de projet générés
+Lenet_36/
+
+# On ignore les fichiers temporaires et logs
+*.log
+*.jou
+.Xil/
+
+# Si tu veux garder tes rapports (optionnel mais conseillé)
+# On peut forcer Git à ne PAS ignorer les fichiers .xml ou .rpt importants
+# !**/syn/report/*.rpt
