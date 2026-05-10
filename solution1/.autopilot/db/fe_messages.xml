@@ -1,0 +1,147 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:84:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="requant_u8_q15" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:115:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1_pragma" ARG_PragmaIsValid="1" ARG_PragmaOptions="operation instances=mul limit=2" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:120:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1_pragma" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:122:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1_pragma" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:124:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1_pragma" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:143:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="maxpool1_pragma" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/solution1/csynth.tcl:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="top_A" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=top_A" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:159:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="top_A" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=y1 type=RAM_2P impl=BRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:52:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="requant_u8_q15" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:75:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1_relu_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="operation instances=mul limit=2" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:80:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1_relu_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=4" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1_relu_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:90:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1_relu_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:130:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="maxpool2x2_s2_c1" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:150:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2_relu_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="operation instances=mul limit=2" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:155:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2_relu_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=4" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:162:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2_relu_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2_relu_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:166:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2_relu_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:192:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="maxpool2x2_s2_c2" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:214:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="flatten_c2" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:223:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fc_requant_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="operation instances=mul limit=2" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:226:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fc_requant_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=4" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:233:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fc_requant_q" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:252:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=in_img_u8 offset=slave bundle=gmem0 depth=1024" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:253:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=out_scores_i32 offset=slave bundle=gmem1 depth=10" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:254:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=in_img_u8 bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:255:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=out_scores_i32 bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:256:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:259:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=x0 type=RAM_2P impl=BRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:267:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=y1 type=RAM_2P impl=BRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:268:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=p1 type=RAM_2P impl=BRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:269:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=y2 type=RAM_2P impl=BRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:270:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=p2 type=RAM_2P impl=BRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:271:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=flat type=RAM_2P impl=BRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:274:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=scores_q type=RAM_2P impl=BRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:279:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Lenet_RTL_test/lenet_inderence.cpp:293:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:131:33" msg_body="Inlining function 'requant_u8_q15(int, int, int)' into 'conv1_pragma(unsigned char const (*) [32], unsigned char (*) [28][28])'">
+        <args Callee="requant_u8_q15(int, int, int)" Callee-DebugLoc="File Lenet_RTL_test/lenet_conv1_only.cpp Line 83 Column 0" Caller="conv1_pragma(unsigned char const (*) [32], unsigned char (*) [28][28])" Caller-DebugLoc="File Lenet_RTL_test/lenet_conv1_only.cpp Line 114 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:123:20" msg_body="Loop 'VITIS_LOOP_123_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_123_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:125:20" msg_body="Loop 'VITIS_LOOP_125_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_125_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:114:0" msg_body="Unrolling loop 'VITIS_LOOP_119_3' (Lenet_RTL_test/lenet_conv1_only.cpp:119:31) in function 'conv1_pragma' partially with a factor of 2">
+        <args Factor="2" LoopLoc="Lenet_RTL_test/lenet_conv1_only.cpp:119:31" LoopName="VITIS_LOOP_119_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:114:0" msg_body="Unrolling loop 'VITIS_LOOP_123_4' (Lenet_RTL_test/lenet_conv1_only.cpp:123:20) in function 'conv1_pragma' completely with a factor of 5">
+        <args Factor="5" LoopLoc="Lenet_RTL_test/lenet_conv1_only.cpp:123:20" LoopName="VITIS_LOOP_123_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:114:0" msg_body="Unrolling loop 'VITIS_LOOP_125_5' (Lenet_RTL_test/lenet_conv1_only.cpp:125:20) in function 'conv1_pragma' completely with a factor of 5">
+        <args Factor="5" LoopLoc="Lenet_RTL_test/lenet_conv1_only.cpp:125:20" LoopName="VITIS_LOOP_125_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:157:0" msg_body="Inlining function 'maxpool1_pragma(unsigned char const (*) [28][28], unsigned char (*) [14][14])' into 'top_A(unsigned char const (*) [32], unsigned char (*) [14][14])'">
+        <args Callee="maxpool1_pragma(unsigned char const (*) [28][28], unsigned char (*) [14][14])" Callee-DebugLoc="File Lenet_RTL_test/lenet_conv1_only.cpp Line 139 Column 0" Caller="top_A(unsigned char const (*) [32], unsigned char (*) [14][14])" Caller-DebugLoc="File Lenet_RTL_test/lenet_conv1_only.cpp Line 157 Column 0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:0:1" msg_body="array_partition dim=2 type=cyclic factor=2 variable=y1 1 top_A Lenet_RTL_test/lenet_conv1_only.cpp:158:13 Lenet_RTL_test/lenet_conv1_only.cpp:143:9y1">
+        <args PragmaFunction="top_A" PragmaIsAuto="1" PragmaOptions="dim=2 type=cyclic factor=2 variable=y1" PragmaSrcLoc="Lenet_RTL_test/lenet_conv1_only.cpp:143:9" PragmaSrcLoc-DebugLoc="File Lenet_RTL_test/lenet_conv1_only.cpp Line 143 Column 9" PragmaType="array_partition" VarName="y1" varLoc="Lenet_RTL_test/lenet_conv1_only.cpp:158:13"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:143:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=2 dim=2' for array 'y1' due to pipeline pragma">
+        <args Dim="2" Factor="2" Mode="cyclic" Name="y1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Lenet_RTL_test/lenet_conv1_only.cpp:158:13" msg_body="Applying array_partition to 'y1': Cyclic partitioning with factor 2 on dimension 2.">
+        <args Dim="2" Factor="2" Mode="Cyclic" UOName="y1"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

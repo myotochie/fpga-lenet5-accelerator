@@ -4,10 +4,14 @@
 	<comment>Created by Vitis v2023.1</comment>
 	<projects>
 		<project>design_1_wrapper_version_36555</project>
+	<name>Lenet_RTL_test</name>
+	<comment></comment>
+	<projects>
 	</projects>
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<triggers>clean,full,incremental,</triggers>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -24,4 +28,67 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+		<nature>com.autoesl.autopilot.ui.AutopilotNature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>source</name>
+			<type>2</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/.apc/.src</location>
+		</link>
+		<link>
+			<name>testbench</name>
+			<type>2</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/.apc/.tb</location>
+		</link>
+		<link>
+			<name>solution1/constraints</name>
+			<type>2</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/solution1/.tcls</location>
+		</link>
+		<link>
+			<name>source/lenet_conv1_only.cpp</name>
+			<type>1</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/lenet_conv1_only.cpp</location>
+		</link>
+		<link>
+			<name>source/lenet_inderence.cpp</name>
+			<type>1</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/lenet_inderence.cpp</location>
+		</link>
+		<link>
+			<name>source/lenet_params_int8.h</name>
+			<type>1</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/lenet_params_int8.h</location>
+		</link>
+		<link>
+			<name>source/lenet_qparams_min.h</name>
+			<type>1</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/lenet_qparams_min.h</location>
+		</link>
+		<link>
+			<name>testbench/tb_conv1_maxpool.cpp</name>
+			<type>1</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/tb_conv1_maxpool.cpp</location>
+		</link>
+		<link>
+			<name>solution1/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/solution1/solution1.directive</location>
+		</link>
+		<link>
+			<name>solution1/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/solution1/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution1/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/solution1/script.tcl</location>
+		</link>
+	</linkedResources>
 </projectDescription>

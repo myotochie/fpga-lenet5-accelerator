@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "top_A",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "top_A"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/myodo/Desktop/Lenet/Lenet_RTL_test/solution1/csynth.tcl",
+    "sourceLine": 19,
+    "success": true
+  }
+]

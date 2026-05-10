@@ -1,0 +1,345 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 131, 
+                   Column: 33 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'requant_u8_q15(int, int, int)'
+    DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 83, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv1_pragma(unsigned char const (*) [32], unsigned char (*) [28][28])'
+    DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 123, 
+                   Column: 20 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_123_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 125, 
+                   Column: 20 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_119_3
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:119:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_123_4
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:123:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:125:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:125:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:125:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:125:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:125:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_123_4
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:123:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:125:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:125:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:125:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:125:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 114, 
+                   Column: 0 }
+Function:        _Z12conv1_pragmaPA32_KhPA28_A28_h
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'Lenet_RTL_test/lenet_conv1_only.cpp:125:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1_pragma
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 157, 
+                   Column: 0 }
+Function:        _Z5top_APA32_KhPA14_A14_h
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'maxpool1_pragma(unsigned char const (*) [28][28], unsigned char (*) [14][14])'
+    DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 139, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'top_A(unsigned char const (*) [32], unsigned char (*) [14][14])'
+    DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 157, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 0, 
+                   Column: 1 }
+Function:        _Z5top_APA32_KhPA14_A14_h
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=cyclic factor=2 variable=y1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  top_A
+  - String:          ' '
+  - varLoc:          'Lenet_RTL_test/lenet_conv1_only.cpp:158:13'
+  - String:          ' '
+  - PragmaSrcLoc:    'Lenet_RTL_test/lenet_conv1_only.cpp:143:9'
+    DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 143, 
+                       Column: 9 }
+  - VarName:         y1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 143, 
+                   Column: 9 }
+Function:        _Z5top_APA32_KhPA14_A14_h
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '2'
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            y1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: Lenet_RTL_test/lenet_conv1_only.cpp, Line: 158, 
+                   Column: 13 }
+Function:        _Z5top_APA32_KhPA14_A14_h
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          y1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...

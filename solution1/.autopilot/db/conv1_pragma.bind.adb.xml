@@ -1,0 +1,2237 @@
+<stg><name>conv1_pragma</name>
+
+
+<trans_list>
+
+<trans id="105" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="106" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="108" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="109" from="4" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="29" bw="2" op_0_bw="32">
+<![CDATA[
+entry:0 %oc = alloca i32 1
+
+]]></Node>
+<StgValue><ssdm name="oc"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="30" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<![CDATA[
+entry:1 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %y_0, i64 666, i64 22, i64 18446744073709551615
+
+]]></Node>
+<StgValue><ssdm name="specmemcore_ln0"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="31" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<![CDATA[
+entry:2 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %y_1, i64 666, i64 22, i64 18446744073709551615
+
+]]></Node>
+<StgValue><ssdm name="specmemcore_ln0"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="32" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<![CDATA[
+entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %x, void @empty_3, i32 0, i32 0, void @empty_2, i32 4294967295, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="33" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="0" op_3_bw="0" op_4_bw="0" op_5_bw="0">
+<![CDATA[
+entry:4 %specresourcelimit_ln115 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 2, void @empty_1, void @empty_2, void @empty_2, void @empty_2
+
+]]></Node>
+<StgValue><ssdm name="specresourcelimit_ln115"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="34" bw="0" op_0_bw="2" op_1_bw="2">
+<![CDATA[
+entry:5 %store_ln117 = store i2 0, i2 %oc
+
+]]></Node>
+<StgValue><ssdm name="store_ln117"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="35" bw="0" op_0_bw="0">
+<![CDATA[
+entry:6 %br_ln117 = br void %VITIS_LOOP_118_2
+
+]]></Node>
+<StgValue><ssdm name="br_ln117"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="12" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="37" bw="2" op_0_bw="2" op_1_bw="0">
+<![CDATA[
+VITIS_LOOP_118_2:0 %oc_1 = load i2 %oc
+
+]]></Node>
+<StgValue><ssdm name="oc_1"/></StgValue>
+</operation>
+
+<operation id="13" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="38" bw="1" op_0_bw="2" op_1_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2:1 %icmp_ln117 = icmp_eq  i2 %oc_1, i2 3
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln117"/></StgValue>
+</operation>
+
+<operation id="14" st_id="2" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="39" bw="2" op_0_bw="2" op_1_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2:2 %add_ln117 = add i2 %oc_1, i2 1
+
+]]></Node>
+<StgValue><ssdm name="add_ln117"/></StgValue>
+</operation>
+
+<operation id="15" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+VITIS_LOOP_118_2:3 %br_ln117 = br i1 %icmp_ln117, void %VITIS_LOOP_118_2.split, void %for.end50
+
+]]></Node>
+<StgValue><ssdm name="br_ln117"/></StgValue>
+</operation>
+
+<operation id="16" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="42" bw="64" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:0 %zext_ln117 = zext i2 %oc_1
+
+]]></Node>
+<StgValue><ssdm name="zext_ln117"/></StgValue>
+</operation>
+
+<operation id="17" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="51" bw="2" op_0_bw="7" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:9 %LENET_C1_W_0_0_0_addr = getelementptr i7 %LENET_C1_W_0_0_0, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_0_addr"/></StgValue>
+</operation>
+
+<operation id="18" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="52" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:10 %LENET_C1_W_0_0_0_load = load i2 %LENET_C1_W_0_0_0_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_0_load"/></StgValue>
+</operation>
+
+<operation id="19" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="53" bw="2" op_0_bw="7" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:11 %LENET_C1_W_0_0_1_addr = getelementptr i7 %LENET_C1_W_0_0_1, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_1_addr"/></StgValue>
+</operation>
+
+<operation id="20" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="54" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:12 %LENET_C1_W_0_0_1_load = load i2 %LENET_C1_W_0_0_1_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_1_load"/></StgValue>
+</operation>
+
+<operation id="21" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="55" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:13 %LENET_C1_W_0_0_2_addr = getelementptr i8 %LENET_C1_W_0_0_2, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_2_addr"/></StgValue>
+</operation>
+
+<operation id="22" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="56" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:14 %LENET_C1_W_0_0_2_load = load i2 %LENET_C1_W_0_0_2_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_2_load"/></StgValue>
+</operation>
+
+<operation id="23" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="57" bw="2" op_0_bw="7" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:15 %LENET_C1_W_0_0_3_addr = getelementptr i7 %LENET_C1_W_0_0_3, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_3_addr"/></StgValue>
+</operation>
+
+<operation id="24" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="58" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:16 %LENET_C1_W_0_0_3_load = load i2 %LENET_C1_W_0_0_3_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_3_load"/></StgValue>
+</operation>
+
+<operation id="25" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="59" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:17 %LENET_C1_W_0_0_4_addr = getelementptr i8 %LENET_C1_W_0_0_4, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_4_addr"/></StgValue>
+</operation>
+
+<operation id="26" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="60" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:18 %LENET_C1_W_0_0_4_load = load i2 %LENET_C1_W_0_0_4_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_4_load"/></StgValue>
+</operation>
+
+<operation id="27" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="61" bw="2" op_0_bw="7" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:19 %LENET_C1_W_0_1_0_addr = getelementptr i7 %LENET_C1_W_0_1_0, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_0_addr"/></StgValue>
+</operation>
+
+<operation id="28" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="62" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:20 %LENET_C1_W_0_1_0_load = load i2 %LENET_C1_W_0_1_0_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_0_load"/></StgValue>
+</operation>
+
+<operation id="29" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="63" bw="2" op_0_bw="6" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:21 %LENET_C1_W_0_1_1_addr = getelementptr i6 %LENET_C1_W_0_1_1, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_1_addr"/></StgValue>
+</operation>
+
+<operation id="30" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="64" bw="6" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:22 %LENET_C1_W_0_1_1_load = load i2 %LENET_C1_W_0_1_1_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_1_load"/></StgValue>
+</operation>
+
+<operation id="31" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="65" bw="2" op_0_bw="7" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:23 %LENET_C1_W_0_1_2_addr = getelementptr i7 %LENET_C1_W_0_1_2, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_2_addr"/></StgValue>
+</operation>
+
+<operation id="32" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="66" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:24 %LENET_C1_W_0_1_2_load = load i2 %LENET_C1_W_0_1_2_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_2_load"/></StgValue>
+</operation>
+
+<operation id="33" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="67" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:25 %LENET_C1_W_0_1_3_addr = getelementptr i8 %LENET_C1_W_0_1_3, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_3_addr"/></StgValue>
+</operation>
+
+<operation id="34" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="68" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:26 %LENET_C1_W_0_1_3_load = load i2 %LENET_C1_W_0_1_3_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_3_load"/></StgValue>
+</operation>
+
+<operation id="35" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="69" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:27 %LENET_C1_W_0_1_4_addr = getelementptr i8 %LENET_C1_W_0_1_4, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_4_addr"/></StgValue>
+</operation>
+
+<operation id="36" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="70" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:28 %LENET_C1_W_0_1_4_load = load i2 %LENET_C1_W_0_1_4_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_4_load"/></StgValue>
+</operation>
+
+<operation id="37" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="71" bw="2" op_0_bw="7" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:29 %LENET_C1_W_0_2_0_addr = getelementptr i7 %LENET_C1_W_0_2_0, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_0_addr"/></StgValue>
+</operation>
+
+<operation id="38" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="72" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:30 %LENET_C1_W_0_2_0_load = load i2 %LENET_C1_W_0_2_0_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_0_load"/></StgValue>
+</operation>
+
+<operation id="39" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="73" bw="2" op_0_bw="7" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:31 %LENET_C1_W_0_2_1_addr = getelementptr i7 %LENET_C1_W_0_2_1, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_1_addr"/></StgValue>
+</operation>
+
+<operation id="40" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="74" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:32 %LENET_C1_W_0_2_1_load = load i2 %LENET_C1_W_0_2_1_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_1_load"/></StgValue>
+</operation>
+
+<operation id="41" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="75" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:33 %LENET_C1_W_0_2_2_addr = getelementptr i8 %LENET_C1_W_0_2_2, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_2_addr"/></StgValue>
+</operation>
+
+<operation id="42" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="76" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:34 %LENET_C1_W_0_2_2_load = load i2 %LENET_C1_W_0_2_2_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_2_load"/></StgValue>
+</operation>
+
+<operation id="43" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="77" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:35 %LENET_C1_W_0_2_3_addr = getelementptr i8 %LENET_C1_W_0_2_3, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_3_addr"/></StgValue>
+</operation>
+
+<operation id="44" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="78" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:36 %LENET_C1_W_0_2_3_load = load i2 %LENET_C1_W_0_2_3_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_3_load"/></StgValue>
+</operation>
+
+<operation id="45" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="79" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:37 %LENET_C1_W_0_2_4_addr = getelementptr i8 %LENET_C1_W_0_2_4, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_4_addr"/></StgValue>
+</operation>
+
+<operation id="46" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="80" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:38 %LENET_C1_W_0_2_4_load = load i2 %LENET_C1_W_0_2_4_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_4_load"/></StgValue>
+</operation>
+
+<operation id="47" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="81" bw="2" op_0_bw="7" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:39 %LENET_C1_W_0_3_0_addr = getelementptr i7 %LENET_C1_W_0_3_0, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_0_addr"/></StgValue>
+</operation>
+
+<operation id="48" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="82" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:40 %LENET_C1_W_0_3_0_load = load i2 %LENET_C1_W_0_3_0_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_0_load"/></StgValue>
+</operation>
+
+<operation id="49" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="83" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:41 %LENET_C1_W_0_3_1_addr = getelementptr i8 %LENET_C1_W_0_3_1, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_1_addr"/></StgValue>
+</operation>
+
+<operation id="50" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="84" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:42 %LENET_C1_W_0_3_1_load = load i2 %LENET_C1_W_0_3_1_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_1_load"/></StgValue>
+</operation>
+
+<operation id="51" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="85" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:43 %LENET_C1_W_0_3_2_addr = getelementptr i8 %LENET_C1_W_0_3_2, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_2_addr"/></StgValue>
+</operation>
+
+<operation id="52" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="86" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:44 %LENET_C1_W_0_3_2_load = load i2 %LENET_C1_W_0_3_2_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_2_load"/></StgValue>
+</operation>
+
+<operation id="53" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="87" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:45 %LENET_C1_W_0_3_3_addr = getelementptr i8 %LENET_C1_W_0_3_3, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_3_addr"/></StgValue>
+</operation>
+
+<operation id="54" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="88" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:46 %LENET_C1_W_0_3_3_load = load i2 %LENET_C1_W_0_3_3_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_3_load"/></StgValue>
+</operation>
+
+<operation id="55" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="89" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:47 %LENET_C1_W_0_3_4_addr = getelementptr i8 %LENET_C1_W_0_3_4, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_4_addr"/></StgValue>
+</operation>
+
+<operation id="56" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="90" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:48 %LENET_C1_W_0_3_4_load = load i2 %LENET_C1_W_0_3_4_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_4_load"/></StgValue>
+</operation>
+
+<operation id="57" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="91" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:49 %LENET_C1_W_0_4_0_addr = getelementptr i8 %LENET_C1_W_0_4_0, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_0_addr"/></StgValue>
+</operation>
+
+<operation id="58" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="92" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:50 %LENET_C1_W_0_4_0_load = load i2 %LENET_C1_W_0_4_0_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_0_load"/></StgValue>
+</operation>
+
+<operation id="59" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="93" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:51 %LENET_C1_W_0_4_1_addr = getelementptr i8 %LENET_C1_W_0_4_1, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_1_addr"/></StgValue>
+</operation>
+
+<operation id="60" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="94" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:52 %LENET_C1_W_0_4_1_load = load i2 %LENET_C1_W_0_4_1_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_1_load"/></StgValue>
+</operation>
+
+<operation id="61" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="95" bw="2" op_0_bw="7" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:53 %LENET_C1_W_0_4_2_addr = getelementptr i7 %LENET_C1_W_0_4_2, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_2_addr"/></StgValue>
+</operation>
+
+<operation id="62" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="96" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:54 %LENET_C1_W_0_4_2_load = load i2 %LENET_C1_W_0_4_2_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_2_load"/></StgValue>
+</operation>
+
+<operation id="63" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="97" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:55 %LENET_C1_W_0_4_3_addr = getelementptr i8 %LENET_C1_W_0_4_3, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_3_addr"/></StgValue>
+</operation>
+
+<operation id="64" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="98" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:56 %LENET_C1_W_0_4_3_load = load i2 %LENET_C1_W_0_4_3_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_3_load"/></StgValue>
+</operation>
+
+<operation id="65" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="99" bw="2" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:57 %LENET_C1_W_0_4_4_addr = getelementptr i8 %LENET_C1_W_0_4_4, i64 0, i64 %zext_ln117
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_4_addr"/></StgValue>
+</operation>
+
+<operation id="66" st_id="2" stage="2" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="100" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:58 %LENET_C1_W_0_4_4_load = load i2 %LENET_C1_W_0_4_4_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_4_load"/></StgValue>
+</operation>
+
+<operation id="67" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="102" bw="0" op_0_bw="2" op_1_bw="2" op_2_bw="0" op_3_bw="0">
+<![CDATA[
+VITIS_LOOP_118_2.split:60 %store_ln117 = store i2 %add_ln117, i2 %oc
+
+]]></Node>
+<StgValue><ssdm name="store_ln117"/></StgValue>
+</operation>
+
+<operation id="68" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln117" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="105" bw="0">
+<![CDATA[
+for.end50:0 %ret_ln135 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln135"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="69" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="43" bw="6" op_0_bw="6" op_1_bw="2" op_2_bw="4">
+<![CDATA[
+VITIS_LOOP_118_2.split:1 %tmp = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i2.i4, i2 %oc_1, i4 0
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="70" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="44" bw="7" op_0_bw="6">
+<![CDATA[
+VITIS_LOOP_118_2.split:2 %zext_ln131 = zext i6 %tmp
+
+]]></Node>
+<StgValue><ssdm name="zext_ln131"/></StgValue>
+</operation>
+
+<operation id="71" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="45" bw="3" op_0_bw="3" op_1_bw="2" op_2_bw="1">
+<![CDATA[
+VITIS_LOOP_118_2.split:3 %tmp_6 = bitconcatenate i3 @_ssdm_op_BitConcatenate.i3.i2.i1, i2 %oc_1, i1 0
+
+]]></Node>
+<StgValue><ssdm name="tmp_6"/></StgValue>
+</operation>
+
+<operation id="72" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="46" bw="7" op_0_bw="3">
+<![CDATA[
+VITIS_LOOP_118_2.split:4 %zext_ln131_3 = zext i3 %tmp_6
+
+]]></Node>
+<StgValue><ssdm name="zext_ln131_3"/></StgValue>
+</operation>
+
+<operation id="73" st_id="3" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="47" bw="7" op_0_bw="7" op_1_bw="7">
+<![CDATA[
+VITIS_LOOP_118_2.split:5 %sub_ln131 = sub i7 %zext_ln131, i7 %zext_ln131_3
+
+]]></Node>
+<StgValue><ssdm name="sub_ln131"/></StgValue>
+</operation>
+
+<operation id="74" st_id="3" stage="1" lat="1">
+<core>Multiplexer</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="50" bw="15" op_0_bw="15" op_1_bw="15" op_2_bw="15" op_3_bw="15" op_4_bw="15" op_5_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:8 %acc = mux i15 @_ssdm_op_Mux.ap_auto.4i15.i2, i15 3563, i15 32559, i15 23266, i15 23266, i2 %oc_1
+
+]]></Node>
+<StgValue><ssdm name="acc"/></StgValue>
+</operation>
+
+<operation id="75" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="52" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:10 %LENET_C1_W_0_0_0_load = load i2 %LENET_C1_W_0_0_0_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_0_load"/></StgValue>
+</operation>
+
+<operation id="76" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="54" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:12 %LENET_C1_W_0_0_1_load = load i2 %LENET_C1_W_0_0_1_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_1_load"/></StgValue>
+</operation>
+
+<operation id="77" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="56" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:14 %LENET_C1_W_0_0_2_load = load i2 %LENET_C1_W_0_0_2_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_2_load"/></StgValue>
+</operation>
+
+<operation id="78" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="58" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:16 %LENET_C1_W_0_0_3_load = load i2 %LENET_C1_W_0_0_3_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_3_load"/></StgValue>
+</operation>
+
+<operation id="79" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="60" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:18 %LENET_C1_W_0_0_4_load = load i2 %LENET_C1_W_0_0_4_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_0_4_load"/></StgValue>
+</operation>
+
+<operation id="80" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="62" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:20 %LENET_C1_W_0_1_0_load = load i2 %LENET_C1_W_0_1_0_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_0_load"/></StgValue>
+</operation>
+
+<operation id="81" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="64" bw="6" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:22 %LENET_C1_W_0_1_1_load = load i2 %LENET_C1_W_0_1_1_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_1_load"/></StgValue>
+</operation>
+
+<operation id="82" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="66" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:24 %LENET_C1_W_0_1_2_load = load i2 %LENET_C1_W_0_1_2_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_2_load"/></StgValue>
+</operation>
+
+<operation id="83" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="68" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:26 %LENET_C1_W_0_1_3_load = load i2 %LENET_C1_W_0_1_3_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_3_load"/></StgValue>
+</operation>
+
+<operation id="84" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="70" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:28 %LENET_C1_W_0_1_4_load = load i2 %LENET_C1_W_0_1_4_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_1_4_load"/></StgValue>
+</operation>
+
+<operation id="85" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="72" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:30 %LENET_C1_W_0_2_0_load = load i2 %LENET_C1_W_0_2_0_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_0_load"/></StgValue>
+</operation>
+
+<operation id="86" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="74" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:32 %LENET_C1_W_0_2_1_load = load i2 %LENET_C1_W_0_2_1_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_1_load"/></StgValue>
+</operation>
+
+<operation id="87" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="76" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:34 %LENET_C1_W_0_2_2_load = load i2 %LENET_C1_W_0_2_2_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_2_load"/></StgValue>
+</operation>
+
+<operation id="88" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="78" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:36 %LENET_C1_W_0_2_3_load = load i2 %LENET_C1_W_0_2_3_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_3_load"/></StgValue>
+</operation>
+
+<operation id="89" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="80" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:38 %LENET_C1_W_0_2_4_load = load i2 %LENET_C1_W_0_2_4_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_2_4_load"/></StgValue>
+</operation>
+
+<operation id="90" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="82" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:40 %LENET_C1_W_0_3_0_load = load i2 %LENET_C1_W_0_3_0_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_0_load"/></StgValue>
+</operation>
+
+<operation id="91" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="84" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:42 %LENET_C1_W_0_3_1_load = load i2 %LENET_C1_W_0_3_1_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_1_load"/></StgValue>
+</operation>
+
+<operation id="92" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="86" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:44 %LENET_C1_W_0_3_2_load = load i2 %LENET_C1_W_0_3_2_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_2_load"/></StgValue>
+</operation>
+
+<operation id="93" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="88" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:46 %LENET_C1_W_0_3_3_load = load i2 %LENET_C1_W_0_3_3_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_3_load"/></StgValue>
+</operation>
+
+<operation id="94" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="90" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:48 %LENET_C1_W_0_3_4_load = load i2 %LENET_C1_W_0_3_4_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_3_4_load"/></StgValue>
+</operation>
+
+<operation id="95" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="92" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:50 %LENET_C1_W_0_4_0_load = load i2 %LENET_C1_W_0_4_0_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_0_load"/></StgValue>
+</operation>
+
+<operation id="96" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="94" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:52 %LENET_C1_W_0_4_1_load = load i2 %LENET_C1_W_0_4_1_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_1_load"/></StgValue>
+</operation>
+
+<operation id="97" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="96" bw="7" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:54 %LENET_C1_W_0_4_2_load = load i2 %LENET_C1_W_0_4_2_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_2_load"/></StgValue>
+</operation>
+
+<operation id="98" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="98" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:56 %LENET_C1_W_0_4_3_load = load i2 %LENET_C1_W_0_4_3_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_3_load"/></StgValue>
+</operation>
+
+<operation id="99" st_id="3" stage="1" lat="2">
+<core>ROM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="100" bw="8" op_0_bw="2">
+<![CDATA[
+VITIS_LOOP_118_2.split:58 %LENET_C1_W_0_4_4_load = load i2 %LENET_C1_W_0_4_4_addr
+
+]]></Node>
+<StgValue><ssdm name="LENET_C1_W_0_4_4_load"/></StgValue>
+</operation>
+
+<operation id="100" st_id="3" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="101" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="7" op_8_bw="7" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="6" op_13_bw="7" op_14_bw="8" op_15_bw="8" op_16_bw="7" op_17_bw="7" op_18_bw="8" op_19_bw="7" op_20_bw="8" op_21_bw="8" op_22_bw="7" op_23_bw="7" op_24_bw="7" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="15">
+<![CDATA[
+VITIS_LOOP_118_2.split:59 %call_ln131 = call void @conv1_pragma_Pipeline_VITIS_LOOP_118_2_VITIS_LOOP_119_3, i7 %sub_ln131, i8 %x, i8 %y_0, i8 %y_1, i8 %LENET_C1_W_0_4_0_load, i8 %LENET_C1_W_0_2_3_load, i7 %LENET_C1_W_0_4_2_load, i7 %LENET_C1_W_0_1_2_load, i8 %LENET_C1_W_0_1_3_load, i8 %LENET_C1_W_0_2_2_load, i8 %LENET_C1_W_0_3_3_load, i6 %LENET_C1_W_0_1_1_load, i7 %LENET_C1_W_0_0_0_load, i8 %LENET_C1_W_0_1_4_load, i8 %LENET_C1_W_0_4_3_load, i7 %LENET_C1_W_0_2_1_load, i7 %LENET_C1_W_0_1_0_load, i8 %LENET_C1_W_0_4_1_load, i7 %LENET_C1_W_0_0_1_load, i8 %LENET_C1_W_0_0_4_load, i8 %LENET_C1_W_0_3_4_load, i7 %LENET_C1_W_0_0_3_load, i7 %LENET_C1_W_0_2_0_load, i7 %LENET_C1_W_0_3_0_load, i8 %LENET_C1_W_0_3_1_load, i8 %LENET_C1_W_0_2_4_load, i8 %LENET_C1_W_0_0_2_load, i8 %LENET_C1_W_0_3_2_load, i8 %LENET_C1_W_0_4_4_load, i15 %acc
+
+]]></Node>
+<StgValue><ssdm name="call_ln131"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="101" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="48" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
+<![CDATA[
+VITIS_LOOP_118_2.split:6 %speclooptripcount_ln117 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3
+
+]]></Node>
+<StgValue><ssdm name="speclooptripcount_ln117"/></StgValue>
+</operation>
+
+<operation id="102" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="49" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+VITIS_LOOP_118_2.split:7 %specloopname_ln117 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4
+
+]]></Node>
+<StgValue><ssdm name="specloopname_ln117"/></StgValue>
+</operation>
+
+<operation id="103" st_id="4" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="101" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="7" op_8_bw="7" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="6" op_13_bw="7" op_14_bw="8" op_15_bw="8" op_16_bw="7" op_17_bw="7" op_18_bw="8" op_19_bw="7" op_20_bw="8" op_21_bw="8" op_22_bw="7" op_23_bw="7" op_24_bw="7" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="15">
+<![CDATA[
+VITIS_LOOP_118_2.split:59 %call_ln131 = call void @conv1_pragma_Pipeline_VITIS_LOOP_118_2_VITIS_LOOP_119_3, i7 %sub_ln131, i8 %x, i8 %y_0, i8 %y_1, i8 %LENET_C1_W_0_4_0_load, i8 %LENET_C1_W_0_2_3_load, i7 %LENET_C1_W_0_4_2_load, i7 %LENET_C1_W_0_1_2_load, i8 %LENET_C1_W_0_1_3_load, i8 %LENET_C1_W_0_2_2_load, i8 %LENET_C1_W_0_3_3_load, i6 %LENET_C1_W_0_1_1_load, i7 %LENET_C1_W_0_0_0_load, i8 %LENET_C1_W_0_1_4_load, i8 %LENET_C1_W_0_4_3_load, i7 %LENET_C1_W_0_2_1_load, i7 %LENET_C1_W_0_1_0_load, i8 %LENET_C1_W_0_4_1_load, i7 %LENET_C1_W_0_0_1_load, i8 %LENET_C1_W_0_0_4_load, i8 %LENET_C1_W_0_3_4_load, i7 %LENET_C1_W_0_0_3_load, i7 %LENET_C1_W_0_2_0_load, i7 %LENET_C1_W_0_3_0_load, i8 %LENET_C1_W_0_3_1_load, i8 %LENET_C1_W_0_2_4_load, i8 %LENET_C1_W_0_0_2_load, i8 %LENET_C1_W_0_3_2_load, i8 %LENET_C1_W_0_4_4_load, i15 %acc
+
+]]></Node>
+<StgValue><ssdm name="call_ln131"/></StgValue>
+</operation>
+
+<operation id="104" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="103" bw="0" op_0_bw="0">
+<![CDATA[
+VITIS_LOOP_118_2.split:61 %br_ln117 = br void %VITIS_LOOP_118_2
+
+]]></Node>
+<StgValue><ssdm name="br_ln117"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="110" name="x" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="x"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="111" name="y_0" dir="1" iftype="1">
+<core>RAM_2P_BRAM</core><StgValue><ssdm name="y_0"/><MemPortTyVec>3 0 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="112" name="y_1" dir="1" iftype="1">
+<core>RAM_2P_BRAM</core><StgValue><ssdm name="y_1"/><MemPortTyVec>3 0 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="113" name="LENET_C1_W_0_0_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_0_0"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="114" name="LENET_C1_W_0_0_1" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_0_1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="115" name="LENET_C1_W_0_0_2" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_0_2"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="116" name="LENET_C1_W_0_0_3" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_0_3"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="117" name="LENET_C1_W_0_0_4" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_0_4"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="118" name="LENET_C1_W_0_1_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_1_0"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="119" name="LENET_C1_W_0_1_1" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_1_1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="120" name="LENET_C1_W_0_1_2" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_1_2"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="121" name="LENET_C1_W_0_1_3" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_1_3"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="122" name="LENET_C1_W_0_1_4" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_1_4"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="123" name="LENET_C1_W_0_2_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_2_0"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="124" name="LENET_C1_W_0_2_1" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_2_1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="125" name="LENET_C1_W_0_2_2" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_2_2"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="126" name="LENET_C1_W_0_2_3" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_2_3"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="127" name="LENET_C1_W_0_2_4" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_2_4"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="128" name="LENET_C1_W_0_3_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_3_0"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="129" name="LENET_C1_W_0_3_1" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_3_1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="130" name="LENET_C1_W_0_3_2" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_3_2"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="131" name="LENET_C1_W_0_3_3" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_3_3"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="132" name="LENET_C1_W_0_3_4" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_3_4"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="133" name="LENET_C1_W_0_4_0" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_4_0"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="134" name="LENET_C1_W_0_4_1" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_4_1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="135" name="LENET_C1_W_0_4_2" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_4_2"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="136" name="LENET_C1_W_0_4_3" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_4_3"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="137" name="LENET_C1_W_0_4_4" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="LENET_C1_W_0_4_4"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="139" from="StgValue_138" to="oc" fromId="138" toId="5">
+</dataflow>
+<dataflow id="141" from="_ssdm_op_SpecMemCore" to="specmemcore_ln0" fromId="140" toId="6">
+</dataflow>
+<dataflow id="142" from="y_0" to="specmemcore_ln0" fromId="111" toId="6">
+</dataflow>
+<dataflow id="144" from="StgValue_143" to="specmemcore_ln0" fromId="143" toId="6">
+</dataflow>
+<dataflow id="146" from="StgValue_145" to="specmemcore_ln0" fromId="145" toId="6">
+</dataflow>
+<dataflow id="148" from="StgValue_147" to="specmemcore_ln0" fromId="147" toId="6">
+</dataflow>
+<dataflow id="149" from="_ssdm_op_SpecMemCore" to="specmemcore_ln0" fromId="140" toId="7">
+</dataflow>
+<dataflow id="150" from="y_1" to="specmemcore_ln0" fromId="112" toId="7">
+</dataflow>
+<dataflow id="151" from="StgValue_143" to="specmemcore_ln0" fromId="143" toId="7">
+</dataflow>
+<dataflow id="152" from="StgValue_145" to="specmemcore_ln0" fromId="145" toId="7">
+</dataflow>
+<dataflow id="153" from="StgValue_147" to="specmemcore_ln0" fromId="147" toId="7">
+</dataflow>
+<dataflow id="155" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="154" toId="8">
+</dataflow>
+<dataflow id="156" from="x" to="specinterface_ln0" fromId="110" toId="8">
+</dataflow>
+<dataflow id="158" from="empty_3" to="specinterface_ln0" fromId="157" toId="8">
+</dataflow>
+<dataflow id="160" from="StgValue_159" to="specinterface_ln0" fromId="159" toId="8">
+</dataflow>
+<dataflow id="161" from="StgValue_159" to="specinterface_ln0" fromId="159" toId="8">
+</dataflow>
+<dataflow id="163" from="empty_2" to="specinterface_ln0" fromId="162" toId="8">
+</dataflow>
+<dataflow id="165" from="StgValue_164" to="specinterface_ln0" fromId="164" toId="8">
+</dataflow>
+<dataflow id="166" from="StgValue_159" to="specinterface_ln0" fromId="159" toId="8">
+</dataflow>
+<dataflow id="167" from="empty_2" to="specinterface_ln0" fromId="162" toId="8">
+</dataflow>
+<dataflow id="168" from="empty_2" to="specinterface_ln0" fromId="162" toId="8">
+</dataflow>
+<dataflow id="169" from="empty_2" to="specinterface_ln0" fromId="162" toId="8">
+</dataflow>
+<dataflow id="170" from="StgValue_159" to="specinterface_ln0" fromId="159" toId="8">
+</dataflow>
+<dataflow id="171" from="StgValue_159" to="specinterface_ln0" fromId="159" toId="8">
+</dataflow>
+<dataflow id="172" from="StgValue_159" to="specinterface_ln0" fromId="159" toId="8">
+</dataflow>
+<dataflow id="173" from="StgValue_159" to="specinterface_ln0" fromId="159" toId="8">
+</dataflow>
+<dataflow id="174" from="empty_2" to="specinterface_ln0" fromId="162" toId="8">
+</dataflow>
+<dataflow id="175" from="empty_2" to="specinterface_ln0" fromId="162" toId="8">
+</dataflow>
+<dataflow id="176" from="StgValue_164" to="specinterface_ln0" fromId="164" toId="8">
+</dataflow>
+<dataflow id="177" from="StgValue_159" to="specinterface_ln0" fromId="159" toId="8">
+</dataflow>
+<dataflow id="179" from="_ssdm_op_SpecResourceLimit" to="specresourcelimit_ln115" fromId="178" toId="9">
+</dataflow>
+<dataflow id="181" from="StgValue_180" to="specresourcelimit_ln115" fromId="180" toId="9">
+</dataflow>
+<dataflow id="183" from="empty_1" to="specresourcelimit_ln115" fromId="182" toId="9">
+</dataflow>
+<dataflow id="184" from="empty_2" to="specresourcelimit_ln115" fromId="162" toId="9">
+</dataflow>
+<dataflow id="185" from="empty_2" to="specresourcelimit_ln115" fromId="162" toId="9">
+</dataflow>
+<dataflow id="186" from="empty_2" to="specresourcelimit_ln115" fromId="162" toId="9">
+</dataflow>
+<dataflow id="188" from="StgValue_187" to="store_ln117" fromId="187" toId="10">
+</dataflow>
+<dataflow id="189" from="oc" to="store_ln117" fromId="5" toId="10">
+</dataflow>
+<dataflow id="190" from="oc" to="oc_1" fromId="5" toId="12">
+</dataflow>
+<dataflow id="191" from="oc_1" to="icmp_ln117" fromId="12" toId="13">
+</dataflow>
+<dataflow id="193" from="StgValue_192" to="icmp_ln117" fromId="192" toId="13">
+</dataflow>
+<dataflow id="194" from="oc_1" to="add_ln117" fromId="12" toId="14">
+</dataflow>
+<dataflow id="196" from="StgValue_195" to="add_ln117" fromId="195" toId="14">
+</dataflow>
+<dataflow id="197" from="icmp_ln117" to="br_ln117" fromId="13" toId="15">
+</dataflow>
+<dataflow id="198" from="oc_1" to="zext_ln117" fromId="12" toId="16">
+</dataflow>
+<dataflow id="199" from="LENET_C1_W_0_0_0" to="LENET_C1_W_0_0_0_addr" fromId="113" toId="17">
+</dataflow>
+<dataflow id="201" from="StgValue_200" to="LENET_C1_W_0_0_0_addr" fromId="200" toId="17">
+</dataflow>
+<dataflow id="202" from="zext_ln117" to="LENET_C1_W_0_0_0_addr" fromId="16" toId="17">
+</dataflow>
+<dataflow id="203" from="LENET_C1_W_0_0_0_addr" to="LENET_C1_W_0_0_0_load" fromId="17" toId="18">
+</dataflow>
+<dataflow id="204" from="LENET_C1_W_0_0_1" to="LENET_C1_W_0_0_1_addr" fromId="114" toId="19">
+</dataflow>
+<dataflow id="205" from="StgValue_200" to="LENET_C1_W_0_0_1_addr" fromId="200" toId="19">
+</dataflow>
+<dataflow id="206" from="zext_ln117" to="LENET_C1_W_0_0_1_addr" fromId="16" toId="19">
+</dataflow>
+<dataflow id="207" from="LENET_C1_W_0_0_1_addr" to="LENET_C1_W_0_0_1_load" fromId="19" toId="20">
+</dataflow>
+<dataflow id="208" from="LENET_C1_W_0_0_2" to="LENET_C1_W_0_0_2_addr" fromId="115" toId="21">
+</dataflow>
+<dataflow id="209" from="StgValue_200" to="LENET_C1_W_0_0_2_addr" fromId="200" toId="21">
+</dataflow>
+<dataflow id="210" from="zext_ln117" to="LENET_C1_W_0_0_2_addr" fromId="16" toId="21">
+</dataflow>
+<dataflow id="211" from="LENET_C1_W_0_0_2_addr" to="LENET_C1_W_0_0_2_load" fromId="21" toId="22">
+</dataflow>
+<dataflow id="212" from="LENET_C1_W_0_0_3" to="LENET_C1_W_0_0_3_addr" fromId="116" toId="23">
+</dataflow>
+<dataflow id="213" from="StgValue_200" to="LENET_C1_W_0_0_3_addr" fromId="200" toId="23">
+</dataflow>
+<dataflow id="214" from="zext_ln117" to="LENET_C1_W_0_0_3_addr" fromId="16" toId="23">
+</dataflow>
+<dataflow id="215" from="LENET_C1_W_0_0_3_addr" to="LENET_C1_W_0_0_3_load" fromId="23" toId="24">
+</dataflow>
+<dataflow id="216" from="LENET_C1_W_0_0_4" to="LENET_C1_W_0_0_4_addr" fromId="117" toId="25">
+</dataflow>
+<dataflow id="217" from="StgValue_200" to="LENET_C1_W_0_0_4_addr" fromId="200" toId="25">
+</dataflow>
+<dataflow id="218" from="zext_ln117" to="LENET_C1_W_0_0_4_addr" fromId="16" toId="25">
+</dataflow>
+<dataflow id="219" from="LENET_C1_W_0_0_4_addr" to="LENET_C1_W_0_0_4_load" fromId="25" toId="26">
+</dataflow>
+<dataflow id="220" from="LENET_C1_W_0_1_0" to="LENET_C1_W_0_1_0_addr" fromId="118" toId="27">
+</dataflow>
+<dataflow id="221" from="StgValue_200" to="LENET_C1_W_0_1_0_addr" fromId="200" toId="27">
+</dataflow>
+<dataflow id="222" from="zext_ln117" to="LENET_C1_W_0_1_0_addr" fromId="16" toId="27">
+</dataflow>
+<dataflow id="223" from="LENET_C1_W_0_1_0_addr" to="LENET_C1_W_0_1_0_load" fromId="27" toId="28">
+</dataflow>
+<dataflow id="224" from="LENET_C1_W_0_1_1" to="LENET_C1_W_0_1_1_addr" fromId="119" toId="29">
+</dataflow>
+<dataflow id="225" from="StgValue_200" to="LENET_C1_W_0_1_1_addr" fromId="200" toId="29">
+</dataflow>
+<dataflow id="226" from="zext_ln117" to="LENET_C1_W_0_1_1_addr" fromId="16" toId="29">
+</dataflow>
+<dataflow id="227" from="LENET_C1_W_0_1_1_addr" to="LENET_C1_W_0_1_1_load" fromId="29" toId="30">
+</dataflow>
+<dataflow id="228" from="LENET_C1_W_0_1_2" to="LENET_C1_W_0_1_2_addr" fromId="120" toId="31">
+</dataflow>
+<dataflow id="229" from="StgValue_200" to="LENET_C1_W_0_1_2_addr" fromId="200" toId="31">
+</dataflow>
+<dataflow id="230" from="zext_ln117" to="LENET_C1_W_0_1_2_addr" fromId="16" toId="31">
+</dataflow>
+<dataflow id="231" from="LENET_C1_W_0_1_2_addr" to="LENET_C1_W_0_1_2_load" fromId="31" toId="32">
+</dataflow>
+<dataflow id="232" from="LENET_C1_W_0_1_3" to="LENET_C1_W_0_1_3_addr" fromId="121" toId="33">
+</dataflow>
+<dataflow id="233" from="StgValue_200" to="LENET_C1_W_0_1_3_addr" fromId="200" toId="33">
+</dataflow>
+<dataflow id="234" from="zext_ln117" to="LENET_C1_W_0_1_3_addr" fromId="16" toId="33">
+</dataflow>
+<dataflow id="235" from="LENET_C1_W_0_1_3_addr" to="LENET_C1_W_0_1_3_load" fromId="33" toId="34">
+</dataflow>
+<dataflow id="236" from="LENET_C1_W_0_1_4" to="LENET_C1_W_0_1_4_addr" fromId="122" toId="35">
+</dataflow>
+<dataflow id="237" from="StgValue_200" to="LENET_C1_W_0_1_4_addr" fromId="200" toId="35">
+</dataflow>
+<dataflow id="238" from="zext_ln117" to="LENET_C1_W_0_1_4_addr" fromId="16" toId="35">
+</dataflow>
+<dataflow id="239" from="LENET_C1_W_0_1_4_addr" to="LENET_C1_W_0_1_4_load" fromId="35" toId="36">
+</dataflow>
+<dataflow id="240" from="LENET_C1_W_0_2_0" to="LENET_C1_W_0_2_0_addr" fromId="123" toId="37">
+</dataflow>
+<dataflow id="241" from="StgValue_200" to="LENET_C1_W_0_2_0_addr" fromId="200" toId="37">
+</dataflow>
+<dataflow id="242" from="zext_ln117" to="LENET_C1_W_0_2_0_addr" fromId="16" toId="37">
+</dataflow>
+<dataflow id="243" from="LENET_C1_W_0_2_0_addr" to="LENET_C1_W_0_2_0_load" fromId="37" toId="38">
+</dataflow>
+<dataflow id="244" from="LENET_C1_W_0_2_1" to="LENET_C1_W_0_2_1_addr" fromId="124" toId="39">
+</dataflow>
+<dataflow id="245" from="StgValue_200" to="LENET_C1_W_0_2_1_addr" fromId="200" toId="39">
+</dataflow>
+<dataflow id="246" from="zext_ln117" to="LENET_C1_W_0_2_1_addr" fromId="16" toId="39">
+</dataflow>
+<dataflow id="247" from="LENET_C1_W_0_2_1_addr" to="LENET_C1_W_0_2_1_load" fromId="39" toId="40">
+</dataflow>
+<dataflow id="248" from="LENET_C1_W_0_2_2" to="LENET_C1_W_0_2_2_addr" fromId="125" toId="41">
+</dataflow>
+<dataflow id="249" from="StgValue_200" to="LENET_C1_W_0_2_2_addr" fromId="200" toId="41">
+</dataflow>
+<dataflow id="250" from="zext_ln117" to="LENET_C1_W_0_2_2_addr" fromId="16" toId="41">
+</dataflow>
+<dataflow id="251" from="LENET_C1_W_0_2_2_addr" to="LENET_C1_W_0_2_2_load" fromId="41" toId="42">
+</dataflow>
+<dataflow id="252" from="LENET_C1_W_0_2_3" to="LENET_C1_W_0_2_3_addr" fromId="126" toId="43">
+</dataflow>
+<dataflow id="253" from="StgValue_200" to="LENET_C1_W_0_2_3_addr" fromId="200" toId="43">
+</dataflow>
+<dataflow id="254" from="zext_ln117" to="LENET_C1_W_0_2_3_addr" fromId="16" toId="43">
+</dataflow>
+<dataflow id="255" from="LENET_C1_W_0_2_3_addr" to="LENET_C1_W_0_2_3_load" fromId="43" toId="44">
+</dataflow>
+<dataflow id="256" from="LENET_C1_W_0_2_4" to="LENET_C1_W_0_2_4_addr" fromId="127" toId="45">
+</dataflow>
+<dataflow id="257" from="StgValue_200" to="LENET_C1_W_0_2_4_addr" fromId="200" toId="45">
+</dataflow>
+<dataflow id="258" from="zext_ln117" to="LENET_C1_W_0_2_4_addr" fromId="16" toId="45">
+</dataflow>
+<dataflow id="259" from="LENET_C1_W_0_2_4_addr" to="LENET_C1_W_0_2_4_load" fromId="45" toId="46">
+</dataflow>
+<dataflow id="260" from="LENET_C1_W_0_3_0" to="LENET_C1_W_0_3_0_addr" fromId="128" toId="47">
+</dataflow>
+<dataflow id="261" from="StgValue_200" to="LENET_C1_W_0_3_0_addr" fromId="200" toId="47">
+</dataflow>
+<dataflow id="262" from="zext_ln117" to="LENET_C1_W_0_3_0_addr" fromId="16" toId="47">
+</dataflow>
+<dataflow id="263" from="LENET_C1_W_0_3_0_addr" to="LENET_C1_W_0_3_0_load" fromId="47" toId="48">
+</dataflow>
+<dataflow id="264" from="LENET_C1_W_0_3_1" to="LENET_C1_W_0_3_1_addr" fromId="129" toId="49">
+</dataflow>
+<dataflow id="265" from="StgValue_200" to="LENET_C1_W_0_3_1_addr" fromId="200" toId="49">
+</dataflow>
+<dataflow id="266" from="zext_ln117" to="LENET_C1_W_0_3_1_addr" fromId="16" toId="49">
+</dataflow>
+<dataflow id="267" from="LENET_C1_W_0_3_1_addr" to="LENET_C1_W_0_3_1_load" fromId="49" toId="50">
+</dataflow>
+<dataflow id="268" from="LENET_C1_W_0_3_2" to="LENET_C1_W_0_3_2_addr" fromId="130" toId="51">
+</dataflow>
+<dataflow id="269" from="StgValue_200" to="LENET_C1_W_0_3_2_addr" fromId="200" toId="51">
+</dataflow>
+<dataflow id="270" from="zext_ln117" to="LENET_C1_W_0_3_2_addr" fromId="16" toId="51">
+</dataflow>
+<dataflow id="271" from="LENET_C1_W_0_3_2_addr" to="LENET_C1_W_0_3_2_load" fromId="51" toId="52">
+</dataflow>
+<dataflow id="272" from="LENET_C1_W_0_3_3" to="LENET_C1_W_0_3_3_addr" fromId="131" toId="53">
+</dataflow>
+<dataflow id="273" from="StgValue_200" to="LENET_C1_W_0_3_3_addr" fromId="200" toId="53">
+</dataflow>
+<dataflow id="274" from="zext_ln117" to="LENET_C1_W_0_3_3_addr" fromId="16" toId="53">
+</dataflow>
+<dataflow id="275" from="LENET_C1_W_0_3_3_addr" to="LENET_C1_W_0_3_3_load" fromId="53" toId="54">
+</dataflow>
+<dataflow id="276" from="LENET_C1_W_0_3_4" to="LENET_C1_W_0_3_4_addr" fromId="132" toId="55">
+</dataflow>
+<dataflow id="277" from="StgValue_200" to="LENET_C1_W_0_3_4_addr" fromId="200" toId="55">
+</dataflow>
+<dataflow id="278" from="zext_ln117" to="LENET_C1_W_0_3_4_addr" fromId="16" toId="55">
+</dataflow>
+<dataflow id="279" from="LENET_C1_W_0_3_4_addr" to="LENET_C1_W_0_3_4_load" fromId="55" toId="56">
+</dataflow>
+<dataflow id="280" from="LENET_C1_W_0_4_0" to="LENET_C1_W_0_4_0_addr" fromId="133" toId="57">
+</dataflow>
+<dataflow id="281" from="StgValue_200" to="LENET_C1_W_0_4_0_addr" fromId="200" toId="57">
+</dataflow>
+<dataflow id="282" from="zext_ln117" to="LENET_C1_W_0_4_0_addr" fromId="16" toId="57">
+</dataflow>
+<dataflow id="283" from="LENET_C1_W_0_4_0_addr" to="LENET_C1_W_0_4_0_load" fromId="57" toId="58">
+</dataflow>
+<dataflow id="284" from="LENET_C1_W_0_4_1" to="LENET_C1_W_0_4_1_addr" fromId="134" toId="59">
+</dataflow>
+<dataflow id="285" from="StgValue_200" to="LENET_C1_W_0_4_1_addr" fromId="200" toId="59">
+</dataflow>
+<dataflow id="286" from="zext_ln117" to="LENET_C1_W_0_4_1_addr" fromId="16" toId="59">
+</dataflow>
+<dataflow id="287" from="LENET_C1_W_0_4_1_addr" to="LENET_C1_W_0_4_1_load" fromId="59" toId="60">
+</dataflow>
+<dataflow id="288" from="LENET_C1_W_0_4_2" to="LENET_C1_W_0_4_2_addr" fromId="135" toId="61">
+</dataflow>
+<dataflow id="289" from="StgValue_200" to="LENET_C1_W_0_4_2_addr" fromId="200" toId="61">
+</dataflow>
+<dataflow id="290" from="zext_ln117" to="LENET_C1_W_0_4_2_addr" fromId="16" toId="61">
+</dataflow>
+<dataflow id="291" from="LENET_C1_W_0_4_2_addr" to="LENET_C1_W_0_4_2_load" fromId="61" toId="62">
+</dataflow>
+<dataflow id="292" from="LENET_C1_W_0_4_3" to="LENET_C1_W_0_4_3_addr" fromId="136" toId="63">
+</dataflow>
+<dataflow id="293" from="StgValue_200" to="LENET_C1_W_0_4_3_addr" fromId="200" toId="63">
+</dataflow>
+<dataflow id="294" from="zext_ln117" to="LENET_C1_W_0_4_3_addr" fromId="16" toId="63">
+</dataflow>
+<dataflow id="295" from="LENET_C1_W_0_4_3_addr" to="LENET_C1_W_0_4_3_load" fromId="63" toId="64">
+</dataflow>
+<dataflow id="296" from="LENET_C1_W_0_4_4" to="LENET_C1_W_0_4_4_addr" fromId="137" toId="65">
+</dataflow>
+<dataflow id="297" from="StgValue_200" to="LENET_C1_W_0_4_4_addr" fromId="200" toId="65">
+</dataflow>
+<dataflow id="298" from="zext_ln117" to="LENET_C1_W_0_4_4_addr" fromId="16" toId="65">
+</dataflow>
+<dataflow id="299" from="LENET_C1_W_0_4_4_addr" to="LENET_C1_W_0_4_4_load" fromId="65" toId="66">
+</dataflow>
+<dataflow id="300" from="add_ln117" to="store_ln117" fromId="14" toId="67">
+</dataflow>
+<dataflow id="301" from="oc" to="store_ln117" fromId="5" toId="67">
+</dataflow>
+<dataflow id="303" from="_ssdm_op_BitConcatenate.i6.i2.i4" to="tmp" fromId="302" toId="69">
+</dataflow>
+<dataflow id="304" from="oc_1" to="tmp" fromId="12" toId="69">
+</dataflow>
+<dataflow id="306" from="StgValue_305" to="tmp" fromId="305" toId="69">
+</dataflow>
+<dataflow id="307" from="tmp" to="zext_ln131" fromId="69" toId="70">
+</dataflow>
+<dataflow id="309" from="_ssdm_op_BitConcatenate.i3.i2.i1" to="tmp_6" fromId="308" toId="71">
+</dataflow>
+<dataflow id="310" from="oc_1" to="tmp_6" fromId="12" toId="71">
+</dataflow>
+<dataflow id="312" from="StgValue_311" to="tmp_6" fromId="311" toId="71">
+</dataflow>
+<dataflow id="313" from="tmp_6" to="zext_ln131_3" fromId="71" toId="72">
+</dataflow>
+<dataflow id="314" from="zext_ln131" to="sub_ln131" fromId="70" toId="73">
+</dataflow>
+<dataflow id="315" from="zext_ln131_3" to="sub_ln131" fromId="72" toId="73">
+</dataflow>
+<dataflow id="317" from="_ssdm_op_Mux.ap_auto.4i15.i2" to="acc" fromId="316" toId="74">
+</dataflow>
+<dataflow id="319" from="StgValue_318" to="acc" fromId="318" toId="74">
+</dataflow>
+<dataflow id="321" from="StgValue_320" to="acc" fromId="320" toId="74">
+</dataflow>
+<dataflow id="323" from="StgValue_322" to="acc" fromId="322" toId="74">
+</dataflow>
+<dataflow id="324" from="StgValue_322" to="acc" fromId="322" toId="74">
+</dataflow>
+<dataflow id="325" from="oc_1" to="acc" fromId="12" toId="74">
+</dataflow>
+<dataflow id="326" from="LENET_C1_W_0_0_0_addr" to="LENET_C1_W_0_0_0_load" fromId="17" toId="75">
+</dataflow>
+<dataflow id="327" from="LENET_C1_W_0_0_1_addr" to="LENET_C1_W_0_0_1_load" fromId="19" toId="76">
+</dataflow>
+<dataflow id="328" from="LENET_C1_W_0_0_2_addr" to="LENET_C1_W_0_0_2_load" fromId="21" toId="77">
+</dataflow>
+<dataflow id="329" from="LENET_C1_W_0_0_3_addr" to="LENET_C1_W_0_0_3_load" fromId="23" toId="78">
+</dataflow>
+<dataflow id="330" from="LENET_C1_W_0_0_4_addr" to="LENET_C1_W_0_0_4_load" fromId="25" toId="79">
+</dataflow>
+<dataflow id="331" from="LENET_C1_W_0_1_0_addr" to="LENET_C1_W_0_1_0_load" fromId="27" toId="80">
+</dataflow>
+<dataflow id="332" from="LENET_C1_W_0_1_1_addr" to="LENET_C1_W_0_1_1_load" fromId="29" toId="81">
+</dataflow>
+<dataflow id="333" from="LENET_C1_W_0_1_2_addr" to="LENET_C1_W_0_1_2_load" fromId="31" toId="82">
+</dataflow>
+<dataflow id="334" from="LENET_C1_W_0_1_3_addr" to="LENET_C1_W_0_1_3_load" fromId="33" toId="83">
+</dataflow>
+<dataflow id="335" from="LENET_C1_W_0_1_4_addr" to="LENET_C1_W_0_1_4_load" fromId="35" toId="84">
+</dataflow>
+<dataflow id="336" from="LENET_C1_W_0_2_0_addr" to="LENET_C1_W_0_2_0_load" fromId="37" toId="85">
+</dataflow>
+<dataflow id="337" from="LENET_C1_W_0_2_1_addr" to="LENET_C1_W_0_2_1_load" fromId="39" toId="86">
+</dataflow>
+<dataflow id="338" from="LENET_C1_W_0_2_2_addr" to="LENET_C1_W_0_2_2_load" fromId="41" toId="87">
+</dataflow>
+<dataflow id="339" from="LENET_C1_W_0_2_3_addr" to="LENET_C1_W_0_2_3_load" fromId="43" toId="88">
+</dataflow>
+<dataflow id="340" from="LENET_C1_W_0_2_4_addr" to="LENET_C1_W_0_2_4_load" fromId="45" toId="89">
+</dataflow>
+<dataflow id="341" from="LENET_C1_W_0_3_0_addr" to="LENET_C1_W_0_3_0_load" fromId="47" toId="90">
+</dataflow>
+<dataflow id="342" from="LENET_C1_W_0_3_1_addr" to="LENET_C1_W_0_3_1_load" fromId="49" toId="91">
+</dataflow>
+<dataflow id="343" from="LENET_C1_W_0_3_2_addr" to="LENET_C1_W_0_3_2_load" fromId="51" toId="92">
+</dataflow>
+<dataflow id="344" from="LENET_C1_W_0_3_3_addr" to="LENET_C1_W_0_3_3_load" fromId="53" toId="93">
+</dataflow>
+<dataflow id="345" from="LENET_C1_W_0_3_4_addr" to="LENET_C1_W_0_3_4_load" fromId="55" toId="94">
+</dataflow>
+<dataflow id="346" from="LENET_C1_W_0_4_0_addr" to="LENET_C1_W_0_4_0_load" fromId="57" toId="95">
+</dataflow>
+<dataflow id="347" from="LENET_C1_W_0_4_1_addr" to="LENET_C1_W_0_4_1_load" fromId="59" toId="96">
+</dataflow>
+<dataflow id="348" from="LENET_C1_W_0_4_2_addr" to="LENET_C1_W_0_4_2_load" fromId="61" toId="97">
+</dataflow>
+<dataflow id="349" from="LENET_C1_W_0_4_3_addr" to="LENET_C1_W_0_4_3_load" fromId="63" toId="98">
+</dataflow>
+<dataflow id="350" from="LENET_C1_W_0_4_4_addr" to="LENET_C1_W_0_4_4_load" fromId="65" toId="99">
+</dataflow>
+<dataflow id="352" from="conv1_pragma_Pipeline_VITIS_LOOP_118_2_VITIS_LOOP_119_3" to="call_ln131" fromId="351" toId="100">
+</dataflow>
+<dataflow id="353" from="sub_ln131" to="call_ln131" fromId="73" toId="100">
+</dataflow>
+<dataflow id="354" from="x" to="call_ln131" fromId="110" toId="100">
+</dataflow>
+<dataflow id="355" from="y_0" to="call_ln131" fromId="111" toId="100">
+</dataflow>
+<dataflow id="356" from="y_1" to="call_ln131" fromId="112" toId="100">
+</dataflow>
+<dataflow id="357" from="LENET_C1_W_0_4_0_load" to="call_ln131" fromId="95" toId="100">
+</dataflow>
+<dataflow id="358" from="LENET_C1_W_0_2_3_load" to="call_ln131" fromId="88" toId="100">
+</dataflow>
+<dataflow id="359" from="LENET_C1_W_0_4_2_load" to="call_ln131" fromId="97" toId="100">
+</dataflow>
+<dataflow id="360" from="LENET_C1_W_0_1_2_load" to="call_ln131" fromId="82" toId="100">
+</dataflow>
+<dataflow id="361" from="LENET_C1_W_0_1_3_load" to="call_ln131" fromId="83" toId="100">
+</dataflow>
+<dataflow id="362" from="LENET_C1_W_0_2_2_load" to="call_ln131" fromId="87" toId="100">
+</dataflow>
+<dataflow id="363" from="LENET_C1_W_0_3_3_load" to="call_ln131" fromId="93" toId="100">
+</dataflow>
+<dataflow id="364" from="LENET_C1_W_0_1_1_load" to="call_ln131" fromId="81" toId="100">
+</dataflow>
+<dataflow id="365" from="LENET_C1_W_0_0_0_load" to="call_ln131" fromId="75" toId="100">
+</dataflow>
+<dataflow id="366" from="LENET_C1_W_0_1_4_load" to="call_ln131" fromId="84" toId="100">
+</dataflow>
+<dataflow id="367" from="LENET_C1_W_0_4_3_load" to="call_ln131" fromId="98" toId="100">
+</dataflow>
+<dataflow id="368" from="LENET_C1_W_0_2_1_load" to="call_ln131" fromId="86" toId="100">
+</dataflow>
+<dataflow id="369" from="LENET_C1_W_0_1_0_load" to="call_ln131" fromId="80" toId="100">
+</dataflow>
+<dataflow id="370" from="LENET_C1_W_0_4_1_load" to="call_ln131" fromId="96" toId="100">
+</dataflow>
+<dataflow id="371" from="LENET_C1_W_0_0_1_load" to="call_ln131" fromId="76" toId="100">
+</dataflow>
+<dataflow id="372" from="LENET_C1_W_0_0_4_load" to="call_ln131" fromId="79" toId="100">
+</dataflow>
+<dataflow id="373" from="LENET_C1_W_0_3_4_load" to="call_ln131" fromId="94" toId="100">
+</dataflow>
+<dataflow id="374" from="LENET_C1_W_0_0_3_load" to="call_ln131" fromId="78" toId="100">
+</dataflow>
+<dataflow id="375" from="LENET_C1_W_0_2_0_load" to="call_ln131" fromId="85" toId="100">
+</dataflow>
+<dataflow id="376" from="LENET_C1_W_0_3_0_load" to="call_ln131" fromId="90" toId="100">
+</dataflow>
+<dataflow id="377" from="LENET_C1_W_0_3_1_load" to="call_ln131" fromId="91" toId="100">
+</dataflow>
+<dataflow id="378" from="LENET_C1_W_0_2_4_load" to="call_ln131" fromId="89" toId="100">
+</dataflow>
+<dataflow id="379" from="LENET_C1_W_0_0_2_load" to="call_ln131" fromId="77" toId="100">
+</dataflow>
+<dataflow id="380" from="LENET_C1_W_0_3_2_load" to="call_ln131" fromId="92" toId="100">
+</dataflow>
+<dataflow id="381" from="LENET_C1_W_0_4_4_load" to="call_ln131" fromId="99" toId="100">
+</dataflow>
+<dataflow id="382" from="acc" to="call_ln131" fromId="74" toId="100">
+</dataflow>
+<dataflow id="384" from="_ssdm_op_SpecLoopTripCount" to="speclooptripcount_ln117" fromId="383" toId="101">
+</dataflow>
+<dataflow id="386" from="StgValue_385" to="speclooptripcount_ln117" fromId="385" toId="101">
+</dataflow>
+<dataflow id="387" from="StgValue_385" to="speclooptripcount_ln117" fromId="385" toId="101">
+</dataflow>
+<dataflow id="388" from="StgValue_385" to="speclooptripcount_ln117" fromId="385" toId="101">
+</dataflow>
+<dataflow id="390" from="_ssdm_op_SpecLoopName" to="specloopname_ln117" fromId="389" toId="102">
+</dataflow>
+<dataflow id="392" from="empty_4" to="specloopname_ln117" fromId="391" toId="102">
+</dataflow>
+<dataflow id="393" from="conv1_pragma_Pipeline_VITIS_LOOP_118_2_VITIS_LOOP_119_3" to="call_ln131" fromId="351" toId="103">
+</dataflow>
+<dataflow id="394" from="sub_ln131" to="call_ln131" fromId="73" toId="103">
+</dataflow>
+<dataflow id="395" from="x" to="call_ln131" fromId="110" toId="103">
+</dataflow>
+<dataflow id="396" from="y_0" to="call_ln131" fromId="111" toId="103">
+</dataflow>
+<dataflow id="397" from="y_1" to="call_ln131" fromId="112" toId="103">
+</dataflow>
+<dataflow id="398" from="LENET_C1_W_0_4_0_load" to="call_ln131" fromId="95" toId="103">
+</dataflow>
+<dataflow id="399" from="LENET_C1_W_0_2_3_load" to="call_ln131" fromId="88" toId="103">
+</dataflow>
+<dataflow id="400" from="LENET_C1_W_0_4_2_load" to="call_ln131" fromId="97" toId="103">
+</dataflow>
+<dataflow id="401" from="LENET_C1_W_0_1_2_load" to="call_ln131" fromId="82" toId="103">
+</dataflow>
+<dataflow id="402" from="LENET_C1_W_0_1_3_load" to="call_ln131" fromId="83" toId="103">
+</dataflow>
+<dataflow id="403" from="LENET_C1_W_0_2_2_load" to="call_ln131" fromId="87" toId="103">
+</dataflow>
+<dataflow id="404" from="LENET_C1_W_0_3_3_load" to="call_ln131" fromId="93" toId="103">
+</dataflow>
+<dataflow id="405" from="LENET_C1_W_0_1_1_load" to="call_ln131" fromId="81" toId="103">
+</dataflow>
+<dataflow id="406" from="LENET_C1_W_0_0_0_load" to="call_ln131" fromId="75" toId="103">
+</dataflow>
+<dataflow id="407" from="LENET_C1_W_0_1_4_load" to="call_ln131" fromId="84" toId="103">
+</dataflow>
+<dataflow id="408" from="LENET_C1_W_0_4_3_load" to="call_ln131" fromId="98" toId="103">
+</dataflow>
+<dataflow id="409" from="LENET_C1_W_0_2_1_load" to="call_ln131" fromId="86" toId="103">
+</dataflow>
+<dataflow id="410" from="LENET_C1_W_0_1_0_load" to="call_ln131" fromId="80" toId="103">
+</dataflow>
+<dataflow id="411" from="LENET_C1_W_0_4_1_load" to="call_ln131" fromId="96" toId="103">
+</dataflow>
+<dataflow id="412" from="LENET_C1_W_0_0_1_load" to="call_ln131" fromId="76" toId="103">
+</dataflow>
+<dataflow id="413" from="LENET_C1_W_0_0_4_load" to="call_ln131" fromId="79" toId="103">
+</dataflow>
+<dataflow id="414" from="LENET_C1_W_0_3_4_load" to="call_ln131" fromId="94" toId="103">
+</dataflow>
+<dataflow id="415" from="LENET_C1_W_0_0_3_load" to="call_ln131" fromId="78" toId="103">
+</dataflow>
+<dataflow id="416" from="LENET_C1_W_0_2_0_load" to="call_ln131" fromId="85" toId="103">
+</dataflow>
+<dataflow id="417" from="LENET_C1_W_0_3_0_load" to="call_ln131" fromId="90" toId="103">
+</dataflow>
+<dataflow id="418" from="LENET_C1_W_0_3_1_load" to="call_ln131" fromId="91" toId="103">
+</dataflow>
+<dataflow id="419" from="LENET_C1_W_0_2_4_load" to="call_ln131" fromId="89" toId="103">
+</dataflow>
+<dataflow id="420" from="LENET_C1_W_0_0_2_load" to="call_ln131" fromId="77" toId="103">
+</dataflow>
+<dataflow id="421" from="LENET_C1_W_0_3_2_load" to="call_ln131" fromId="92" toId="103">
+</dataflow>
+<dataflow id="422" from="LENET_C1_W_0_4_4_load" to="call_ln131" fromId="99" toId="103">
+</dataflow>
+<dataflow id="423" from="acc" to="call_ln131" fromId="74" toId="103">
+</dataflow>
+<dataflow id="424" from="icmp_ln117" to="StgValue_2" fromId="13" toId="2">
+</dataflow>
+</dataflows>
+
+
+</stg>
