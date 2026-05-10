@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//source/lenet_conv1_only.cpp=UTF-8
+encoding//source/lenet_inderence.cpp=UTF-8
+encoding//testbench/tb_conv1_maxpool.cpp=UTF-8

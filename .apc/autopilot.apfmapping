@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lenet_conv1_only.cpp" path="C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_conv1_only.cpp"/>
+    <originFiles name="lenet_inderence.cpp" path="C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_inderence.cpp"/>
+    <originFiles name="lenet_params_int8.h" path="C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_params_int8.h"/>
+    <originFiles name="lenet_qparams_min.h" path="C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\lenet_qparams_min.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_conv1_maxpool.cpp" path="C:\Users\myodo\Desktop\Lenet\Lenet_RTL_test\tb_conv1_maxpool.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
